@@ -1,0 +1,110 @@
+[
+  {
+    "id": "m1",
+    "for": "MAN",
+    "name": "New",
+    "link": "#"
+  },
+  {
+    "id": "m2",
+    "for": "MAN",
+    "name": "Apparel",
+    "link": "#"
+  },
+  {
+    "id": "m3",
+    "for": "MAN",
+    "name": "Bag",
+    "link": "#"
+  },
+  {
+    "id": "m4",
+    "for": "MAN",
+    "name": "Shoes",
+    "link": "#"
+  },
+  {
+    "id": "m5",
+    "for": "MAN",
+    "name": "Beauty",
+    "link": "#"
+  },
+  {
+    "id": "m6",
+    "for": "MAN",
+    "name": "Accessories",
+    "link": "#"
+  },
+  {
+    "id": "f1",
+    "for": "WOMEN",
+    "name": "New",
+    "link": "#"
+  },
+  {
+    "id": "f2",
+    "for": "WOMEN",
+    "name": "Apparel",
+    "link": "#"
+  },
+  {
+    "id": "f3",
+    "for": "WOMEN",
+    "name": "Bag",
+    "link": "#"
+  },
+  {
+    "id": "f4",
+    "for": "WOMEN",
+    "name": "Shoes",
+    "link": "#"
+  },
+  {
+    "id": "f5",
+    "for": "WOMEN",
+    "name": "Beauty",
+    "link": "#"
+  },
+  {
+    "id": "f6",
+    "for": "WOMEN",
+    "name": "Accessories",
+    "link": "#"
+  },
+  {
+    "id": "k1",
+    "for": "KIDS",
+    "name": "New",
+    "link": "#"
+  },
+  {
+    "id": "k2",
+    "for": "KIDS",
+    "name": "Apparel",
+    "link": "#"
+  },
+  {
+    "id": "k3",
+    "for": "KIDS",
+    "name": "Bag",
+    "link": "#"
+  },
+  {
+    "id": "k4",
+    "for": "KIDS",
+    "name": "Shoes",
+    "link": "#"
+  },
+  {
+    "id": "k5",
+    "for": "KIDS",
+    "name": "Beauty",
+    "link": "#"
+  },
+  {
+    "id": "k6",
+    "for": "KIDS",
+    "name": "Accessories",
+    "link": "#"
+  }
+]

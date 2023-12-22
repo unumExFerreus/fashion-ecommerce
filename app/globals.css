@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'tenor';
+    src: url(../public/fonts/tenor/TenorSans-Regular.ttf);
+}
+
+.tenor {
+    font-family: "tenor";
+}
+@font-face {
+    font-family: 'moda';
+    src: url(../public/fonts/BodoniModa/BodoniModaVariableFont.ttf);
+}
+
+.moda {
+    font-family: "moda";
+}
