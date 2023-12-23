@@ -18,14 +18,14 @@ export const Submenu = (props: any) => {
   };
 
   return (
-    <div className="absolute w-full h-[100vh] bg-[#111]">
-      <div className="flex flex-col justify-between h-full container max-w-[1440px] mx-auto tenor">
-        <ul className="flex relative mx-auto w-full mt-[4rem]">
-          <li className="relative">
-            {/* tab button */}
+    <div className="absolute w-full h-full bg-[#111] overflow-y-auto overflow-x-hidden tenor">
+      <div className="flex flex-col min-h-[100vh] justify-between container max-w-[1440px] mx-auto">
+        <ul className="flex relative w-full mt-[4rem]">
+          {/* tab button */}
+          <li className="mr-[10vw] relative">
             <button
               onClick={() => toggleTab(1)}
-              className={`after:bottom-[-9px] after:block after:content-[''] after:absolute after:h-[5px] after:w-full after:bg-center after:bg-cover after:bg-no-repeat after:bg-[url('../public/images/Divider.svg')] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out  ${
+              className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-10px] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
                 tabOpen === 1
                   ? "text-[#FCFCFC] duration-300 after:scale-x-100"
                   : "text-[#FCFCFC]/60"
@@ -56,11 +56,11 @@ export const Submenu = (props: any) => {
               })}
             </ul>
           </div>
-          <li className="ml-[15%] relative">
-            {/* tab button */}
+          {/* tab button */}
+          <li className="mr-[10vw] relative">
             <button
               onClick={() => toggleTab(2)}
-              className={`after:bottom-[-9px] after:block after:content-[''] after:absolute after:h-[5px] after:w-full after:bg-center after:bg-cover after:bg-no-repeat after:bg-[url('../public/images/Divider.svg')] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out  ${
+              className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-10px] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
                 tabOpen === 2
                   ? "text-[#FCFCFC] duration-300 after:scale-x-100"
                   : "text-[#FCFCFC]/60"
@@ -91,11 +91,11 @@ export const Submenu = (props: any) => {
               })}
             </ul>
           </div>
-          <li className="ml-[15%] relative">
-            {/* Tab Button */}
+          {/* Tab Button */}
+          <li className="mr-[10vw] relative">
             <button
               onClick={() => toggleTab(3)}
-              className={`after:bottom-[-9px] after:block after:content-[''] after:absolute after:h-[5px] after:w-full after:bg-center after:bg-cover after:bg-no-repeat after:bg-[url('../public/images/Divider.svg')] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
+              className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-0.625rem] after:block after:absolute after:h-[0.625rem] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
                 tabOpen === 3
                   ? "text-[#FCFCFC] duration-300 after:scale-x-100"
                   : "text-[#FCFCFC]/60"
@@ -106,7 +106,6 @@ export const Submenu = (props: any) => {
               </h3>
             </button>
           </li>
-
           {/* Tab Content */}
           <div
             className={`absolute top-[4.5rem] transition-all duration-700 ${
@@ -127,11 +126,11 @@ export const Submenu = (props: any) => {
               })}
             </ul>
           </div>
-          <hr className="absolute mt-[30px] w-full h-[1px] border-0 bg-[#888]/60" />
+          <hr className="absolute mt-[1.793rem] w-full h-[0.04rem] border-0 bg-[#888]/60" />
         </ul>
 
         {/* Social Media */}
-        <div className="mb-6 text-[#fcfcfc]">
+        <div className="mt-[348px] mb-6 text-[#fcfcfc]">
           <div className="flex ml-1 mb-4 cursor-pointer">
             <RiPhoneLine
               className="w-6 h-6 mr-4 fill-[#fcfcfc]"
@@ -146,7 +145,7 @@ export const Submenu = (props: any) => {
             />
             <span>Store locator</span>
           </div>
-          <div className="w-[55%] sm:w-[35%] md:w-[20%] mx-auto mb-4 fill-[#888]/60">
+          <div className="w-[55%] sm:w-[45%] md:w-[35%] lg:w-[20%] mx-auto mb-3 fill-[#888]/60">
             <svg viewBox="60.839 104.117 124.959 9.255">
               <path
                 d="M 123.396 113.372 L 127.946 108.822 L 185.798 108.822 L 185.798 108.615 L 127.946 108.615 L 123.396 104.117 L 118.898 108.615 L 60.839 108.615 L 60.839 108.822 L 118.898 108.822 L 123.396 113.372 Z M 123.396 104.427 L 127.739 108.719 L 123.396 113.061 L 119.053 108.719 L 123.396 104.427 Z"
@@ -154,7 +153,7 @@ export const Submenu = (props: any) => {
               />
             </svg>
           </div>
-          <div className="flex mx-auto w-[50%] sm:w-[30%] md:w-[15%] justify-between">
+          <div className="flex mx-auto w-[45%] sm:w-[40%] md:w-[25%] lg:w-[15%] justify-between">
             <Link href={"#"}>
               <RiInstagramFill
                 className="fill-[#fcfcfc] w-6 h-6"

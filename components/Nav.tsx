@@ -24,9 +24,9 @@ const Nav = () => {
     <div className="flex justify-between container max-w-[1440px] w-full h-[60px] md:h-[72px] py-5 z-20">
       <div className="flex items-center">
         {/* CUSTOM SVG FOR MENU BUTTON */}
-        <button className="z-50 fill-[#fcfcfc]" onClick={toggleMenu}>
+        <button className="z-50 mr-[56px] fill-[#fcfcfc]" onClick={toggleMenu}>
           <svg
-            className="relative mr-[56px] w-[24px] h-[24px]"
+            className="relative w-[24px] h-[24px]"
             viewBox="0 0 100 100"
           >
             <rect
