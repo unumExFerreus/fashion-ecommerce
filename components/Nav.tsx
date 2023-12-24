@@ -62,12 +62,12 @@ const Nav = () => {
         >
           <Submenu />
         </div>
-        <div
+        {/* <div
           className={`fixed md:hidden inset-0 w-full h-full bg-black/40 backdrop-blur-[10px] duration-700 ${
             // if it works, don’t fix it //
             isMenuOpen ? "z-[10] opacity-100" : "-z-[10] opacity-0"
           }`}
-        />
+        /> */}
       </div>
       {/* NAVBAR */}
       <div className="flex justify-center items-center fill-[#fcfcfc] w-20 md:w-28 h-auto p-[1px]">
