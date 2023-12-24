@@ -21,14 +21,11 @@ const Nav = () => {
   };
 
   return (
-    <div className="flex justify-between container max-w-[1440px] w-full h-[60px] md:h-[72px] py-5 z-20">
+    <div className="flex justify-between container max-w-[1440px] w-full h-[60px] md:h-[72px] py-5 ">
       <div className="flex items-center">
         {/* CUSTOM SVG FOR MENU BUTTON */}
         <button className="z-50 mr-[56px] fill-[#fcfcfc]" onClick={toggleMenu}>
-          <svg
-            className="relative w-[24px] h-[24px]"
-            viewBox="0 0 100 100"
-          >
+          <svg className="relative w-[24px] h-[24px]" viewBox="0 0 100 100">
             <rect
               className={`translate-y-[25%] transition-all duration-500 ease-in-out ${
                 isMenuOpen ? "rotate-45 origin-[13px_8px]" : ""
@@ -66,8 +63,9 @@ const Nav = () => {
           <Submenu />
         </div>
         <div
-          className={`fixed inset-0 w-[100vw] h-full transition-all duration-1000 bg-black/40 backdrop-blur-[15px] z-30 ${
-            isMenuOpen ? "flex" : "hidden"
+          className={`fixed md:hidden inset-0 w-full h-full bg-black/40 backdrop-blur-[10px] duration-700 ${
+            // if it works, don’t fix it //
+            isMenuOpen ? "z-[10] opacity-100" : "-z-[10] opacity-0"
           }`}
         />
       </div>
