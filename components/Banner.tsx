@@ -8,6 +8,7 @@ import DotSVG from "./SVGs/DotSVG";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "framer-motion";
+import { once } from "events";
 
 export const Banner = () => {
   const slides = [Banner_1, Banner_2, Banner_3];
@@ -38,13 +39,13 @@ export const Banner = () => {
     return () => stopAutoPlay();
   }, [currentIndex]);
 
-
   return (
     <div className="inline-block overflow-hidden w-full h-full relative">
       <motion.div
         initial={{ scale: 1.2 }}
         whileInView={{ scale: 1 }}
-        transition={{ duration: 3, ease: [.5, 0, 0, 1] }}
+        transition={{ duration: 3, ease: [0.5, 0, 0, 1] }}
+        viewport={{ once: true }}
       >
         <Image
           layout="responsive"
