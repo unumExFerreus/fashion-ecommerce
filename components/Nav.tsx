@@ -21,31 +21,31 @@ const Nav = () => {
   };
 
   return (
-    <div className="flex justify-between container max-w-[1440px] w-full h-[60px] md:h-[72px] py-5 ">
+    <div className="flex justify-between container max-w-[1440px] w-full h-[60px] md:h-[72px] mx-auto py-5 ">
       <div className="flex items-center">
         {/* CUSTOM SVG FOR MENU BUTTON */}
         <button className="z-50 mr-[56px] fill-[#fcfcfc]" onClick={toggleMenu}>
           <svg className="relative w-[24px] h-[24px]" viewBox="0 0 100 100">
             <rect
-              className={`translate-y-[25%] transition-all duration-500 ease-in-out ${
-                isMenuOpen ? "rotate-45 origin-[13px_8px]" : ""
+              className={`translate-y-[25%] transition-all duration-700 ease-in-out ${
+                isMenuOpen ? "rotate-45 origin-[13px_8px] left-0" : ""
               }`}
               width={100}
               height={5}
               x={1}
             ></rect>
             <rect
-              className={`translate-y-[50%] transition-all duration-500 ease-in-out ${
-                isMenuOpen ? "w-[0]" : ""
+              className={`translate-y-[50%] transition-all duration-700 ease-in-out ${
+                isMenuOpen ? "w-[0] left-0" : ""
               }`}
               width={70}
               height={5}
               x={1}
             ></rect>
             <rect
-              className={`translate-y-[75%] transition-all duration-500 ease-in-out ${
+              className={`translate-y-[75%] transition-all duration-700 ease-in-out ${
                 isMenuOpen
-                  ? "-rotate-45 translate-y-[50%] origin-[21px_1px]"
+                  ? "-rotate-45 translate-y-[50%] origin-[21px_1px] left-0"
                   : ""
               }`}
               width={100}
@@ -56,15 +56,20 @@ const Nav = () => {
         </button>
         {/* SLIDE MENU */}
         <div
-          className={`fixed inset-0 w-full h-full duration-700 ease-out z-40 ${
-            isMenuOpen ? "left-0 md:flex" : "left-[-100vw] md:hidden"
+          className={`fixed right-0 md:left-0 bottom-0 top-0 w-full h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-40 ${
+            isMenuOpen ? "left-0 visible md:opacity-100 md:blur-[0px]" : "left-[-100%] invisible md:blur-[40px] md:opacity-0"
           }`}
         >
           <Submenu />
         </div>
+        <div
+          className={`absolute inset-0 w-full backdrop-blur-[10px] bg-black/60 z-30 duration-[2s] ease-[cubic-bezier(.5,0,0,1)] md:invisible ${
+            isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        ></div>
       </div>
-      {/* NAVBAR */}
-      <div className="flex justify-center items-center fill-[#fcfcfc] w-20 md:w-28 h-auto p-[1px]">
+      {/* NAV ICONS */}
+      <div className="flex justify-center items-center fill-[#fcfcfc] w-20 md:w-24 h-auto p-[1px]">
         <LogoSVG />
       </div>
       <div className="flex items-center">

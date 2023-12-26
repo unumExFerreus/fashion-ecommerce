@@ -6,6 +6,9 @@ import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { Banner_1, Banner_2, Banner_3 } from "../public/images/_index";
 import DotSVG from "./SVGs/DotSVG";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "framer-motion";
+
 export const Banner = () => {
   const slides = [Banner_1, Banner_2, Banner_3];
 
@@ -35,53 +38,61 @@ export const Banner = () => {
     return () => stopAutoPlay();
   }, [currentIndex]);
 
-  return (
-    <div className="w-full h-fit relative">
-      <Image
-        layout="responsive"
-        loading="eager"
-        className="object-cover object-top"
-        src={slides[currentIndex]}
-        alt=""
-      />
 
-      {/* LEFT ARROW */}
-      <button
-        onClick={prevSlide}
-        className="absolute text-[#fcfcfc] top-[75%] left-2 z-[1]"
+  return (
+    <div className="inline-block overflow-hidden w-full h-full relative">
+      <motion.div
+        initial={{ scale: 1.2 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 3, ease: [.5, 0, 0, 1] }}
       >
-        <SlArrowLeft
-          className="w-4 sm:w-6 md:w-7 h-auto"
-          alt="left arrow icon"
+        <Image
+          layout="responsive"
+          loading="eager"
+          src={slides[currentIndex]}
+          alt=""
+          className="max-h-[1065px]"
         />
-      </button>
-      {/* RIGHT ARROW */}
-      <button
-        onClick={nextSlide}
-        className="absolute text-[#fcfcfc] top-[75%] right-2 z-[1]"
-      >
-        <SlArrowRight
-          className="w-4 sm:w-6 md:w-7 h-auto"
-          alt="right arrow icon"
-        />
-      </button>
+      </motion.div>
       <div className="absolute w-full bottom-0">
-        <h1 className="w-fit ml-[30%] sm:ml-[33%] md:ml-[35%] mb-[30%] md:mb-[45%] text-[1.25rem] sm:text-[1.75rem] md:text-[3rem] text-[#FCFCFC] leading-[1.5rem] sm:leading-[2.25rem] md:leading-[3.25rem] tracking-[1.5px] md:tracking-[3px] moda italic z-10">
-          <span>
-            LUXURY <br />
-          </span>
-          <span className="ml-4">
-            FASHION
-            <br />
-          </span>
-          <span className="ml-[-.875rem]">&ACCESSORIES</span>
-        </h1>
+        <div className="pb-[30%] md:pb-[45%] relative">
+          <h1 className="w-fit ml-[30%] sm:ml-[33%] md:ml-[35%] text-[1.25rem] sm:text-[1.75rem] md:text-[3rem] text-[#FCFCFC] leading-[1.5rem] sm:leading-[2.25rem] md:leading-[3.25rem] tracking-[1.5px] md:tracking-[3px] moda italic z-10">
+            <span>
+              LUXURY <br />
+            </span>
+            <span className="ml-4">
+              FASHION
+              <br />
+            </span>
+            <span className="ml-[-.875rem]">&ACCESSORIES</span>
+          </h1>
+          {/* LEFT ARROW */}
+          <button
+            onClick={prevSlide}
+            className="absolute text-[#fcfcfc] bottom-[20%] md:bottom-[30%] left-2 z-[1]"
+          >
+            <SlArrowLeft
+              className="w-4 sm:w-6 md:w-7 h-auto drop-shadow-[0_0px_5px_rgba(1,1,1,1)]"
+              alt="left arrow icon"
+            />
+          </button>
+          {/* RIGHT ARROW */}
+          <button
+            onClick={nextSlide}
+            className="absolute text-[#fcfcfc] bottom-[20%] md:bottom-[30%] right-2 z-[1]"
+          >
+            <SlArrowRight
+              className="w-4 sm:w-6 md:w-7 h-auto drop-shadow-[0_0px_5px_rgba(1,1,1,1)]"
+              alt="right arrow icon"
+            />
+          </button>
+        </div>
         <div className="flex justify-center">
-          <button className="min-w-[190px] w-1/3 h-10 bg-[#FCFCFC]/40 backdrop-blur-[2px] rounded-full z-[1]">
+          <button className="min-w-[190px] w-1/3 h-10 bg-[#FCFCFC]/50 backdrop-blur-[4px] rounded-full z-[1]">
             <span className="text-[#111] !blur-[0px]">EXPLORE COLLECTION</span>
           </button>
         </div>
-        <div className="flex justify-center items-center w-fit mx-auto my-[2%] cursor-pointer">
+        <div className="flex justify-center items-center w-fit mx-auto my-[2%] cursor-pointer drop-shadow-[0_0px_8px_rgba(1,1,1,1)]">
           {slides.map((slide, slideIndex) => (
             <div
               key={slideIndex}

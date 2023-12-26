@@ -2,11 +2,13 @@ import { Banner } from "../components/Banner";
 
 export default function Home() {
   return (
-    <div className="flex justify-center max-w-[1440px] relative mx-auto scroll-smooth">
-      <section className="flex justify-center w-full max-w-[800px] relative">
-        <Banner />
+    <div className="scroll-smooth">
+      <section className="mx-auto relative">
+        <div className="w-full max-w-[800px] mx-auto relative">
+          <Banner />
+        </div>
       </section>
-      <div className="flex h-[300vh]"></div>
+      <div className="flex w-full mx-0 h-[300vh]"></div>
     </div>
   );
 }

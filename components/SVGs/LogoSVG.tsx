@@ -48,7 +48,7 @@ const LogoSVG = () => {
       </g>
       <defs>
         <clipPath id="clip0_1010_1444">
-          <rect width="78.0849" height="32" fill="white" />
+          <rect width="78.0849" height="32"/>
         </clipPath>
       </defs>
     </svg>

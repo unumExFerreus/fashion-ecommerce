@@ -18,11 +18,13 @@ export const Submenu = (props: any) => {
   };
 
   return (
-    <div className="absolute w-full h-full bg-[#111] overflow-y-auto overflow-x-hidden tenor">
-      <div className="flex flex-col min-h-[100vh] justify-between container max-w-[1440px] mx-auto">
-        <ul className="flex relative w-full mt-[4rem]">
+    <div className="w-full h-full bg-[#111] overflow-y-auto overflow-x-hidden tenor">
+      {/* background for menu button */}
+      <div className="sticky block top-0 w-full h-[60px] md:h-[72px] bg-[#111] z-[51]" />
+      <div className="flex flex-col min-h-[calc(100dvh-72px)] md:min-h-[calc(100dvh-72px)] justify-between container max-w-[1440px] mx-auto">
+        <ul className="flex gap-[10%] relative w-full">
           {/* tab button */}
-          <li className="mr-[10vw] relative">
+          <li className="relative">
             <button
               onClick={() => toggleTab(1)}
               className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-10px] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
@@ -41,7 +43,7 @@ export const Submenu = (props: any) => {
             className={`absolute top-[4.5rem] transition-all duration-700 ${
               tabOpen === 1
                 ? "opacity-100 left-[0]"
-                : "opacity-0 left-[-5vw] z-[-51]"
+                : "opacity-0 left-[-10%] invisible"
             }`}
           >
             <ul>
@@ -57,7 +59,7 @@ export const Submenu = (props: any) => {
             </ul>
           </div>
           {/* tab button */}
-          <li className="mr-[10vw] relative">
+          <li className="relative">
             <button
               onClick={() => toggleTab(2)}
               className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-10px] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
@@ -75,8 +77,8 @@ export const Submenu = (props: any) => {
           <div
             className={`absolute top-[4.5rem] transition-all duration-700 ${
               tabOpen === 2
-                ? "flex opacity-100 left-[0]"
-                : "opacity-0 left-[-5vw] z-[-51]"
+                ? "opacity-100 left-[0]"
+                : "opacity-0 left-[-10%] invisible"
             }`}
           >
             <ul>
@@ -92,7 +94,7 @@ export const Submenu = (props: any) => {
             </ul>
           </div>
           {/* Tab Button */}
-          <li className="mr-[10vw] relative">
+          <li className="relative">
             <button
               onClick={() => toggleTab(3)}
               className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-0.625rem] after:block after:absolute after:h-[0.625rem] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
@@ -110,8 +112,8 @@ export const Submenu = (props: any) => {
           <div
             className={`absolute top-[4.5rem] transition-all duration-700 ${
               tabOpen === 3
-                ? "flex opacity-100 left-0"
-                : "opacity-0 left-[-5vw] z-[-51]"
+                ? "opacity-100 left-[0]"
+                : "opacity-0 left-[-10%] invisible"
             }`}
           >
             <ul>
@@ -128,7 +130,6 @@ export const Submenu = (props: any) => {
           </div>
           <hr className="absolute mt-[1.793rem] w-full h-[0.04rem] border-0 bg-[#888]/60" />
         </ul>
-
         {/* Social Media */}
         <div className="mt-[348px] mb-6 text-[#fcfcfc]">
           <div className="flex ml-1 mb-4 cursor-pointer">

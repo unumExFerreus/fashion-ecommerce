@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="bg-[#111]" lang="en">
+    <html style={{scrollbarGutter: "stable"}} className="bg-[#111]" lang="en">
       <body className={inter.className}>
-        <header className="flex justify-center">
+        <header>
           <Nav />
         </header>
         <main>{children}</main>
