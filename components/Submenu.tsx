@@ -20,8 +20,8 @@ export const Submenu = (props: any) => {
   return (
     <div className="w-full h-full bg-[#111] overflow-y-auto overflow-x-hidden tenor">
       {/* background for menu button */}
-      <div className="sticky block top-0 w-full h-[60px] md:h-[72px] bg-[#111] z-[51]" />
-      <div className="flex flex-col min-h-[calc(100dvh-72px)] md:min-h-[calc(100dvh-72px)] justify-between container max-w-[1440px] mx-auto">
+      <div className="absolute block top-0 w-full h-[72px] md:h-[72px] bg-[#111] z-[51]" />
+      <div className="flex flex-col min-h-[calc(100dvh-72px)] justify-between container max-w-[1440px] mx-auto mt-[72px]">
         <ul className="flex gap-[10%] relative w-full">
           {/* tab button */}
           <li className="relative">

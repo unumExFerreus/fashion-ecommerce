@@ -21,7 +21,8 @@ const Nav = () => {
   };
 
   return (
-    <div className="flex justify-between container max-w-[1440px] w-full h-[60px] md:h-[72px] mx-auto py-5 ">
+    <nav className="flex justify-between z-50 container max-w-[1440px] w-full h-[72px] mx-auto py-5 bg-[#111]">
+      {/* slider */}
       <div className="flex items-center">
         {/* CUSTOM SVG FOR MENU BUTTON */}
         <button className="z-50 mr-[56px] fill-[#fcfcfc]" onClick={toggleMenu}>
@@ -54,19 +55,22 @@ const Nav = () => {
             ></rect>
           </svg>
         </button>
-        {/* SLIDE MENU */}
         <div
           className={`fixed right-0 md:left-0 bottom-0 top-0 w-full h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-40 ${
-            isMenuOpen ? "left-0 visible md:opacity-100 md:blur-[0px]" : "left-[-100%] invisible md:blur-[40px] md:opacity-0"
+            isMenuOpen
+              ? "left-0 visible md:opacity-100 md:blur-[0px]"
+              : "left-[-100%] invisible md:blur-[40px] md:opacity-0"
           }`}
         >
           <Submenu />
         </div>
+        {/* BACKDROP */}
         <div
-          className={`absolute inset-0 w-full backdrop-blur-[10px] bg-black/60 z-30 duration-[2s] ease-[cubic-bezier(.5,0,0,1)] md:invisible ${
+          className={`absolute inset-0 w-full h-[100dvh] backdrop-blur-[10px] bg-black/60 z-30 duration-[2s] ease-[cubic-bezier(.5,0,0,1)] md:invisible ${
             isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
-        ></div>
+        >
+        </div>
       </div>
       {/* NAV ICONS */}
       <div className="flex justify-center items-center fill-[#fcfcfc] w-20 md:w-24 h-auto p-[1px]">
@@ -82,7 +86,7 @@ const Nav = () => {
           <ShopingSVG />
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 

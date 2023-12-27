@@ -1,14 +1,14 @@
-import { Banner } from "../components/Banner";
+import { Hero } from "../components/Hero";
 
 export default function Home() {
   return (
     <div className="scroll-smooth">
-      <section className="mx-auto relative">
-        <div className="w-full max-w-[800px] mx-auto relative">
-          <Banner />
-        </div>
+      <section aria-label="hero" className="mx-auto relative">
+        <Hero />
       </section>
-      <div className="flex w-full mx-0 h-[300vh]"></div>
+      <section aria-label="New Arrival" className="w-full h-[100dvh]">
+
+      </section>
     </div>
   );
 }
