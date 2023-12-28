@@ -7,7 +7,6 @@ export default function Home() {
         <Hero />
       </section>
       <section aria-label="New Arrival" className="w-full h-[100dvh]">
-
       </section>
     </div>
   );

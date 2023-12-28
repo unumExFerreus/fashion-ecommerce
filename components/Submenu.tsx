@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import submenuData from "../db.json";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 import {
   RiInstagramFill,
   RiTwitterXLine,
@@ -17,121 +18,164 @@ export const Submenu = (props: any) => {
     setTabOpen(id);
   };
 
+  const animateY = {
+    initial: {
+      opacity: 0,
+      y: "75%",
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.5, 0, 0, 1],
+        duration: 1,
+      },
+    },
+  };
+
   return (
-    <div className="w-full h-full bg-[#111] overflow-y-auto overflow-x-hidden tenor">
-      {/* background for menu button */}
-      <div className="absolute block top-0 w-full h-[72px] md:h-[72px] bg-[#111] z-[51]" />
-      <div className="flex flex-col min-h-[calc(100dvh-72px)] justify-between container max-w-[1440px] mx-auto mt-[72px]">
-        <ul className="flex gap-[10%] relative w-full">
-          {/* tab button */}
-          <li className="relative">
-            <button
-              onClick={() => toggleTab(1)}
-              className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-10px] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
+    <div className="w-full h-full bg-[#111] tenor">
+      <div className="flex flex-col h-[100dvh] justify-between container max-w-[1440px] mx-auto pt-[72px] relative">
+        {/* tab button */}
+        <div className="">
+          <ul className="sticky flex gap-[10%] justify-between md:justify-normal max-w-[1440px] w-full z-10">
+            <li className="relative">
+              <button
+                onClick={() => toggleTab(1)}
+                className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-.6rem] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
+                  tabOpen === 1
+                    ? "text-[#FCFCFC] duration-300 after:scale-x-100"
+                    : "text-[#FCFCFC]/60"
+                }`}
+              >
+                <h3 className="text-[.875rem] tracking-[4px] cursor-pointer indent-1">
+                  WOMEN
+                </h3>
+              </button>
+            </li>
+            <li className="relative">
+              <button
+                onClick={() => toggleTab(2)}
+                className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-.6rem] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
+                  tabOpen === 2
+                    ? "text-[#FCFCFC] duration-300 after:scale-x-100"
+                    : "text-[#FCFCFC]/60"
+                }`}
+              >
+                <h3 className="text-[.875rem] tracking-[4px] cursor-pointer indent-1">
+                  MAN
+                </h3>
+              </button>
+            </li>
+            <li className="relative">
+              <button
+                onClick={() => toggleTab(3)}
+                className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-.6rem] after:block after:absolute after:h-[0.625rem] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
+                  tabOpen === 3
+                    ? "text-[#FCFCFC] duration-300 after:scale-x-100"
+                    : "text-[#FCFCFC]/60"
+                }`}
+              >
+                <h3 className="text-[.875rem] tracking-[4px] cursor-pointer indent-1">
+                  KIDS
+                </h3>
+              </button>
+            </li>
+            <hr className="absolute mt-[1.793rem] w-full border-1 border-[#888]/60" />
+          </ul>
+          {/* tab content */}
+          <section
+            className="sticky flex w-full h-fit max-h-[45dvh] mt-10 overflow-y-auto"
+            aria-label="tab content"
+          >
+            <div
+              className={`w-full h-fit transition-all duration-1000 ${
                 tabOpen === 1
-                  ? "text-[#FCFCFC] duration-300 after:scale-x-100"
-                  : "text-[#FCFCFC]/60"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5 absolute hidden"
               }`}
             >
-              <h3 className="text-[.875rem] tracking-[4px] cursor-pointer indent-1">
-                WOMEN
-              </h3>
-            </button>
-          </li>
-          {/* tab content */}
-          <div
-            className={`absolute top-[4.5rem] transition-all duration-700 ${
-              tabOpen === 1
-                ? "opacity-100 left-[0]"
-                : "opacity-0 left-[-10%] invisible"
-            }`}
-          >
-            <ul>
-              {submenuData.map((e) => {
-                if (e.for === "WOMEN") {
-                  return (
-                    <li className="text-[#FCFCFC]/100 mb-5 indent-1" key={e.id}>
-                      <Link href={e.link}>{e.name}</Link>
-                    </li>
-                  );
-                }
-              })}
-            </ul>
-          </div>
-          {/* tab button */}
-          <li className="relative">
-            <button
-              onClick={() => toggleTab(2)}
-              className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-10px] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
+              <ul>
+                {submenuData.map((e) => {
+                  if (e.for === "WOMEN") {
+                    return (
+                      <motion.li
+                        variants={animateY}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{
+                          once: false,
+                        }}
+                        className="text-[#FCFCFC]/100 mb-5 indent-1"
+                        key={e.id}
+                      >
+                        <Link href={e.link}>{e.name}</Link>
+                      </motion.li>
+                    );
+                  }
+                })}
+              </ul>
+            </div>
+            <div
+              className={`w-full h-fit transition-all duration-1000 ${
                 tabOpen === 2
-                  ? "text-[#FCFCFC] duration-300 after:scale-x-100"
-                  : "text-[#FCFCFC]/60"
+                  ? "opacity-100 translate-y-0 "
+                  : "opacity-0 translate-y-5 absolute hidden"
               }`}
             >
-              <h3 className="text-[.875rem] tracking-[4px] cursor-pointer indent-1">
-                MAN
-              </h3>
-            </button>
-          </li>
-          {/* tab content */}
-          <div
-            className={`absolute top-[4.5rem] transition-all duration-700 ${
-              tabOpen === 2
-                ? "opacity-100 left-[0]"
-                : "opacity-0 left-[-10%] invisible"
-            }`}
-          >
-            <ul>
-              {submenuData.map((e) => {
-                if (e.for === "MAN") {
-                  return (
-                    <li className="text-[#FCFCFC]/100 mb-5 indent-1" key={e.id}>
-                      <Link href={e.link}>{e.name}</Link>
-                    </li>
-                  );
-                }
-              })}
-            </ul>
-          </div>
-          {/* Tab Button */}
-          <li className="relative">
-            <button
-              onClick={() => toggleTab(3)}
-              className={`after:bg-[url('../public/images/Divider.svg')] after:bottom-[-0.625rem] after:block after:absolute after:h-[0.625rem] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
+              <ul>
+                {submenuData.map((e) => {
+                  if (e.for === "MAN") {
+                    return (
+                      <motion.li
+                        variants={animateY}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{
+                          once: false,
+                        }}
+                        className="text-[#FCFCFC]/100 mb-5 indent-1"
+                        key={e.id}
+                      >
+                        <Link href={e.link}>{e.name}</Link>
+                      </motion.li>
+                    );
+                  }
+                })}
+              </ul>
+            </div>
+            <div
+              className={`w-full h-fit transition-all duration-1000 ${
                 tabOpen === 3
-                  ? "text-[#FCFCFC] duration-300 after:scale-x-100"
-                  : "text-[#FCFCFC]/60"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5 absolute hidden"
               }`}
             >
-              <h3 className="text-[.875rem] tracking-[4px] cursor-pointer indent-1">
-                KIDS
-              </h3>
-            </button>
-          </li>
-          {/* Tab Content */}
-          <div
-            className={`absolute top-[4.5rem] transition-all duration-700 ${
-              tabOpen === 3
-                ? "opacity-100 left-[0]"
-                : "opacity-0 left-[-10%] invisible"
-            }`}
-          >
-            <ul>
-              {submenuData.map((e) => {
-                if (e.for === "KIDS") {
-                  return (
-                    <li className="text-[#FCFCFC] mb-5 indent-1" key={e.id}>
-                      <Link href={e.link}>{e.name}</Link>
-                    </li>
-                  );
-                }
-              })}
-            </ul>
-          </div>
-          <hr className="absolute mt-[1.793rem] w-full h-[0.04rem] border-0 bg-[#888]/60" />
-        </ul>
+              <ul>
+                {submenuData.map((e) => {
+                  if (e.for === "KIDS") {
+                    return (
+                      <motion.li
+                        variants={animateY}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{
+                          once: false,
+                        }}
+                        className="text-[#FCFCFC]/100 mb-5 indent-1"
+                        key={e.id}
+                      >
+                        <Link href={e.link}>{e.name}</Link>
+                      </motion.li>
+                    );
+                  }
+                })}
+              </ul>
+            </div>
+          </section>
+        </div>
         {/* Social Media */}
-        <div className="mt-[348px] mb-6 text-[#fcfcfc]">
+        <div className="flex flex-col mb-6 mt-10 text-[#fcfcfc]">
           <div className="flex ml-1 mb-4 cursor-pointer">
             <RiPhoneLine
               className="w-6 h-6 mr-4 fill-[#fcfcfc]"

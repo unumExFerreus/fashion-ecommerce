@@ -6,17 +6,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-::-webkit-scrollbar-track {
-  background-color: #111;
-}
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: #dd8560;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #dd8560;
-}
-
 @font-face {
   font-family: "tenor";
   src: url(../public/fonts/tenor/TenorSans-Regular.ttf);

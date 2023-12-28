@@ -106,5 +106,101 @@
     "for": "KIDS",
     "name": "Accessories",
     "link": "#"
+  },
+  {
+    "id": "k7",
+    "for": "KIDS",
+    "name": "New",
+    "link": "#"
+  },
+  {
+    "id": "k8",
+    "for": "KIDS",
+    "name": "Apparel",
+    "link": "#"
+  },
+  {
+    "id": "k9",
+    "for": "KIDS",
+    "name": "Bag",
+    "link": "#"
+  },
+  {
+    "id": "k10",
+    "for": "KIDS",
+    "name": "Shoes",
+    "link": "#"
+  },
+  {
+    "id": "k11",
+    "for": "KIDS",
+    "name": "Beauty",
+    "link": "#"
+  },
+  {
+    "id": "k12",
+    "for": "KIDS",
+    "name": "Accessories",
+    "link": "#"
+  },
+  {
+    "id": "k13",
+    "for": "KIDS",
+    "name": "Apparel",
+    "link": "#"
+  },
+  {
+    "id": "k14",
+    "for": "KIDS",
+    "name": "Bag",
+    "link": "#"
+  },
+  {
+    "id": "k15",
+    "for": "KIDS",
+    "name": "Shoes",
+    "link": "#"
+  },
+  {
+    "id": "k16",
+    "for": "KIDS",
+    "name": "Beauty",
+    "link": "#"
+  },
+  {
+    "id": "k17",
+    "for": "KIDS",
+    "name": "Accessories",
+    "link": "#"
+  },
+  {
+    "id": "k18",
+    "for": "KIDS",
+    "name": "New",
+    "link": "#"
+  },
+  {
+    "id": "k19",
+    "for": "KIDS",
+    "name": "Apparel",
+    "link": "#"
+  },
+  {
+    "id": "k20",
+    "for": "KIDS",
+    "name": "Bag",
+    "link": "#"
+  },
+  {
+    "id": "k21",
+    "for": "KIDS",
+    "name": "Shoes",
+    "link": "#"
+  },
+  {
+    "id": "k22",
+    "for": "KIDS",
+    "name": "Beauty",
+    "link": "#"
   }
 ]
