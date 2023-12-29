@@ -6,7 +6,7 @@ export default function Home() {
       <section aria-label="hero" className="mx-auto relative">
         <Hero />
       </section>
-      <section aria-label="New Arrival" className="w-full h-[100dvh]">
+      <section aria-label="New Arrival" className="w-full h-full">
       </section>
     </div>
   );

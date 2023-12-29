@@ -36,8 +36,8 @@ export const Submenu = (props: any) => {
   return (
     <div className="w-full h-full bg-[#111] tenor">
       <div className="flex flex-col h-[100dvh] justify-between container max-w-[1440px] mx-auto pt-[72px] relative">
-        {/* tab button */}
-        <div className="">
+        <section aria-label="tab">
+          {/* tab button */}
           <ul className="sticky flex gap-[10%] justify-between md:justify-normal max-w-[1440px] w-full z-10">
             <li className="relative">
               <button
@@ -84,15 +84,12 @@ export const Submenu = (props: any) => {
             <hr className="absolute mt-[1.793rem] w-full border-1 border-[#888]/60" />
           </ul>
           {/* tab content */}
-          <section
-            className="sticky flex w-full h-fit max-h-[45dvh] mt-10 overflow-y-auto"
-            aria-label="tab content"
-          >
+          <div className="sticky flex w-full h-fit max-h-[45dvh] mt-5 xs:mt-10 overflow-y-auto">
             <div
               className={`w-full h-fit transition-all duration-1000 ${
                 tabOpen === 1
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-5 absolute hidden"
+                  ? ""
+                  : "absolute hidden"
               }`}
             >
               <ul>
@@ -106,7 +103,7 @@ export const Submenu = (props: any) => {
                         viewport={{
                           once: false,
                         }}
-                        className="text-[#FCFCFC]/100 mb-5 indent-1"
+                        className="text-[#FCFCFC]/100 text-[.875rem] xs:text-[1rem] mb-2 xs:mb-5 indent-1"
                         key={e.id}
                       >
                         <Link href={e.link}>{e.name}</Link>
@@ -119,8 +116,8 @@ export const Submenu = (props: any) => {
             <div
               className={`w-full h-fit transition-all duration-1000 ${
                 tabOpen === 2
-                  ? "opacity-100 translate-y-0 "
-                  : "opacity-0 translate-y-5 absolute hidden"
+                  ? " "
+                  : "absolute hidden"
               }`}
             >
               <ul>
@@ -134,7 +131,7 @@ export const Submenu = (props: any) => {
                         viewport={{
                           once: false,
                         }}
-                        className="text-[#FCFCFC]/100 mb-5 indent-1"
+                        className="text-[#FCFCFC]/100 text-[.875rem] xs:text-[1rem] mb-2 xs:mb-5 indent-1"
                         key={e.id}
                       >
                         <Link href={e.link}>{e.name}</Link>
@@ -147,8 +144,8 @@ export const Submenu = (props: any) => {
             <div
               className={`w-full h-fit transition-all duration-1000 ${
                 tabOpen === 3
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-5 absolute hidden"
+                  ? ""
+                  : "absolute hidden"
               }`}
             >
               <ul>
@@ -162,7 +159,7 @@ export const Submenu = (props: any) => {
                         viewport={{
                           once: false,
                         }}
-                        className="text-[#FCFCFC]/100 mb-5 indent-1"
+                        className="text-[#FCFCFC]/100 text-[.875rem] xs:text-[1rem] mb-2 xs:mb-5 indent-1"
                         key={e.id}
                       >
                         <Link href={e.link}>{e.name}</Link>
@@ -172,23 +169,23 @@ export const Submenu = (props: any) => {
                 })}
               </ul>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
         {/* Social Media */}
-        <div className="flex flex-col mb-6 mt-10 text-[#fcfcfc]">
-          <div className="flex ml-1 mb-4 cursor-pointer">
+        <div className="flex flex-col mb-1 xs:mb-6 text-[#fcfcfc]">
+          <div className="flex ml-1 mb-2 xs:mb-4 cursor-pointer">
             <RiPhoneLine
               className="w-6 h-6 mr-4 fill-[#fcfcfc]"
               alt="call icon"
             />
-            <span>(777) 777-7777</span>
+            <span className="text-[.875rem] xs:text-[1rem]">(777) 777-7777</span>
           </div>
-          <div className="flex ml-1 mb-8 cursor-pointer ">
+          <div className="flex ml-1 mb-3 xs:mb-8 cursor-pointer ">
             <RiMapPinLine
               className="w-6 h-6 mr-4 fill-[#fcfcfc]"
               alt="location icon"
             />
-            <span>Store locator</span>
+            <span className="text-[.875rem] xs:text-[1rem]">Store locator</span>
           </div>
           <div className="w-[55%] sm:w-[45%] md:w-[35%] lg:w-[20%] mx-auto mb-3 fill-[#888]/60">
             <svg viewBox="60.839 104.117 124.959 9.255">

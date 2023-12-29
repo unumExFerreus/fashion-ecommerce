@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html style={{scrollbarGutter: "stable"}} className="bg-[#111] scroll-smooth" lang="en">
+    <html className="bg-[#111] scroll-smooth" lang="en">
       <body className={inter.className}>
         <header className="sticky top-0 w-full h-auto z-50">
           <Nav />

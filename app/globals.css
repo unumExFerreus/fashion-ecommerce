@@ -4,6 +4,7 @@
 
 * {
   -webkit-tap-highlight-color: transparent;
+  scrollbar-gutter: stable;
 }
 
 @font-face {
