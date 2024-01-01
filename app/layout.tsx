@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Nav from "../components/Nav";
+import Nav from "../components/Navigation/Nav";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="bg-[#111] scroll-smooth" lang="en">
+    <html style={{scrollbarGutter: "stable"}} className="bg-[#111] scroll-smooth" lang="en">
       <body className={inter.className}>
         <header className="sticky top-0 w-full h-auto z-50">
           <Nav />

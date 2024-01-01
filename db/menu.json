@@ -1,0 +1,43 @@
+{
+  "menu": [
+    {
+      "tab": "WOMEN",
+      "items": [
+        { "name": "New", "link": "#" },
+        { "name": "Apparel", "link": "#" },
+        { "name": "Bag", "link": "#" },
+        { "name": "Shoes", "link": "#" },
+        { "name": "Beauty", "link": "#" },
+        { "name": "Accessories", "link": "#" }
+      ]
+    },
+    {
+      "tab": "MEN",
+      "items": [
+        { "name": "New", "link": "#" },
+        { "name": "Apparel", "link": "#" },
+        { "name": "Bag", "link": "#" },
+        { "name": "Shoes", "link": "#" },
+        { "name": "Beauty", "link": "#" },
+        { "name": "Accessories", "link": "#" }
+      ]
+    },
+    {
+      "tab": "KIDS",
+      "items": [
+        { "name": "New", "link": "#" },
+        { "name": "Apparel", "link": "#" },
+        { "name": "Bag", "link": "#" },
+        { "name": "Shoes", "link": "#" },
+        { "name": "Beauty", "link": "#" },
+        { "name": "Accessories", "link": "#" },
+        { "name": "New", "link": "#" },
+        { "name": "Apparel", "link": "#" },
+        { "name": "Bag", "link": "#" },
+        { "name": "Shoes", "link": "#" },
+        { "name": "Beauty", "link": "#" },
+        { "name": "Accessories", "link": "#" }
+      ]
+    }
+  ]
+}

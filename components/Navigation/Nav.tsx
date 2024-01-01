@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 import { Submenu } from "./Submenu";
-import Image from "next/image";
-import Link from "next/link";
-import { Logo } from "../public/images/_index";
-import LogoSVG from "./SVGs/LogoSVG";
-import SearchSVG from "./SVGs/SearchSVG";
-import ShopingSVG from "./SVGs/ShopingSVG";
+import LogoSVG from "../SVGs/LogoSVG";
+import SearchSVG from "../SVGs/SearchSVG";
+import ShopingSVG from "../SVGs/ShopingSVG";
 
 const Nav = () => {
+  // opem menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+
+    // disable scroll 
     if (!isMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -21,7 +21,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="flex justify-between z-50 container max-w-[1440px] w-full h-[72px] mx-auto py-5 bg-[#111]">
+    <nav className="flex justify-between z-50 container max-w-[1440px] w-full h-[72px] mx-auto py-5 bg-[#111] select-none">
       {/* slider */}
       <div className="flex items-center">
         {/* CUSTOM SVG FOR MENU BUTTON */}
