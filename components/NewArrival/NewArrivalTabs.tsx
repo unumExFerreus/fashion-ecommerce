@@ -55,9 +55,11 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button onClick={handeleClick} value={"Apparel"}>
-                <h3>Apparel</h3>
-              </button>
+              <h3>
+                <button onClick={handeleClick} value={"Apparel"}>
+                  Apparel
+                </button>
+              </h3>
             </div>
           </li>
           <li className="relative">
@@ -71,9 +73,11 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button onClick={handeleClick} value={"Dress"}>
-                <h3>Dress</h3>
-              </button>
+              <h3>
+                <button onClick={handeleClick} value={"Apparel"}>
+                  Dress
+                </button>
+              </h3>
             </div>
           </li>
           <li className="relative">
@@ -87,9 +91,11 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button onClick={handeleClick} value={"Tshirt"}>
-                <h3>Tshirt</h3>
-              </button>
+              <h3>
+                <button onClick={handeleClick} value={"Apparel"}>
+                  Tshirt
+                </button>
+              </h3>
             </div>
           </li>
           <li className="relative">
@@ -103,9 +109,11 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button onClick={handeleClick} value={"Bag"}>
-                <h3>Bag</h3>
-              </button>
+              <h3>
+                <button onClick={handeleClick} value={"Apparel"}>
+                  Bag
+                </button>
+              </h3>
             </div>
           </li>
         </ul>
