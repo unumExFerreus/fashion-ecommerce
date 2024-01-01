@@ -27,13 +27,13 @@ const NewArrivalTabs = () => {
 
     if (selected) {
       filteredProducts = filteredProducts.filter(
-        (dataProduct) => dataProduct.category === selected
+        (dataProduct: any) => dataProduct.category === selected
       );
     }
 
     const slicedProducts = filteredProducts.slice(0, 4);
 
-    return slicedProducts.map(({ img, title, price, id }) => (
+    return slicedProducts.map(({ img, title, price, id }: any) => (
       <ArrivalCards key={id} img={img} title={title} price={price} />
     ));
   }

@@ -1,4 +1,4 @@
-function ArrivalProducts({ result }) {
+function ArrivalProducts({ result }: any) {
   return (
     <>
       {result}
