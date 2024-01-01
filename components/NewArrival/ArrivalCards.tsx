@@ -15,7 +15,7 @@ const animateY = {
     },
   },
 };
-function ArrivalCards({ img, title, price, id }) {
+function ArrivalCards({ img, title, price, id }: any) {
   return (
     <motion.div
       variants={animateY}
