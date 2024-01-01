@@ -5,7 +5,6 @@ import ArrivalProducts from "./ArrivalProducts";
 import ArrivalCards from "./ArrivalCards";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-
 // arrival data
 import dataProduct from "../../db/product";
 
@@ -57,7 +56,7 @@ const NewArrivalTabs = () => {
               }`}
             >
               <button onClick={handeleClick} value={"Apparel"}>
-                Apparel
+                <h3>Apparel</h3>
               </button>
             </div>
           </li>
@@ -73,7 +72,7 @@ const NewArrivalTabs = () => {
               }`}
             >
               <button onClick={handeleClick} value={"Dress"}>
-                Dress
+                <h3>Dress</h3>
               </button>
             </div>
           </li>
@@ -89,7 +88,7 @@ const NewArrivalTabs = () => {
               }`}
             >
               <button onClick={handeleClick} value={"Tshirt"}>
-                Tshirt
+                <h3>Tshirt</h3>
               </button>
             </div>
           </li>
@@ -105,7 +104,7 @@ const NewArrivalTabs = () => {
               }`}
             >
               <button onClick={handeleClick} value={"Bag"}>
-                Bag
+                <h3>Bag</h3>
               </button>
             </div>
           </li>
