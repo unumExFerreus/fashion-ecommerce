@@ -36,7 +36,7 @@ function ArrivalCards({ img, title, price, id }: any) {
           className="object-contain object-top"
         ></Image>
         <div className="flex-col mx-auto pt-1 md:pt-2 pb-4">
-          <h4 className="text-center text-[#fcfcfc] text-xs md:text-sm">{title}</h4>
+          <h3 className="text-center text-[#fcfcfc] text-xs md:text-sm">{title}</h3>
           <span className="flex justify-center text-[#DD8560] text-sm md:text-base">${price}</span>
         </div>
       </div>

@@ -5,6 +5,7 @@ import ArrivalProducts from "./ArrivalProducts";
 import ArrivalCards from "./ArrivalCards";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
+
 // arrival data
 import dataProduct from "../../db/product";
 
@@ -55,11 +56,9 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <h3>
-                <button onClick={handeleClick} value={"Apparel"}>
-                  Apparel
-                </button>
-              </h3>
+              <button onClick={handeleClick} value={"Apparel"}>
+                Apparel
+              </button>
             </div>
           </li>
           <li className="relative">
@@ -73,11 +72,9 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <h3>
-                <button onClick={handeleClick} value={"Apparel"}>
-                  Dress
-                </button>
-              </h3>
+              <button onClick={handeleClick} value={"Dress"}>
+                Dress
+              </button>
             </div>
           </li>
           <li className="relative">
@@ -91,11 +88,9 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <h3>
-                <button onClick={handeleClick} value={"Apparel"}>
-                  Tshirt
-                </button>
-              </h3>
+              <button onClick={handeleClick} value={"Tshirt"}>
+                Tshirt
+              </button>
             </div>
           </li>
           <li className="relative">
@@ -109,11 +104,9 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <h3>
-                <button onClick={handeleClick} value={"Apparel"}>
-                  Bag
-                </button>
-              </h3>
+              <button onClick={handeleClick} value={"Bag"}>
+                Bag
+              </button>
             </div>
           </li>
         </ul>
