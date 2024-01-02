@@ -117,10 +117,10 @@ const NewArrivalTabs = () => {
         aria-label="arrival content"
       >
         <ArrivalProducts result={result} />
-        <div className="flex items-center text-[#fcfcfc] text-base md:text-lg my-5 tenor">
+        <button className="flex items-center h-0 text-[#fcfcfc] text-base md:text-2xl my-5 tenor">
           <span>Explore More</span>
           <IoIosArrowRoundForward className="flex items-end" size={30} />
-        </div>
+        </button>
       </section>
     </>
   );
