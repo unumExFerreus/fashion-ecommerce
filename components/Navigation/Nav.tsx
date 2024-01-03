@@ -12,8 +12,20 @@ const Nav = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
 
-    // disable scroll 
+    // disable scroll
     if (!isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  };
+  // open search bar
+  const [isSearch, setIsSearch] = useState(false);
+  const toggleSearch = () => {
+    setIsSearch(!isSearch);
+
+    // disable scroll
+    if (!isSearch) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -69,8 +81,7 @@ const Nav = () => {
           className={`absolute inset-0 w-full h-[100dvh] backdrop-blur-[10px] bg-black/60 z-30 duration-[2s] ease-[cubic-bezier(.5,0,0,1)] md:invisible ${
             isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
-        >
-        </div>
+        ></div>
       </div>
       {/* NAV ICONS */}
       <div className="flex justify-center items-center fill-[#fcfcfc] w-20 md:w-24 h-auto p-[1px]">
@@ -78,9 +89,21 @@ const Nav = () => {
       </div>
       <div className="flex items-center">
         {/* SEARCH BUTTON */}
-        <button className="ml-4 w-6 h-6 stroke-[#fcfcfc]">
+        <button
+          onClick={toggleSearch}
+          className="ml-4 w-6 h-6 stroke-[#fcfcfc]"
+        >
           <SearchSVG />
         </button>
+        <div
+          className={`fixed right-0 md:left-0 bottom-0 top-0 w-full h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-40 ${
+            isSearch
+              ? "left-0 visible md:opacity-100 md:blur-[0px]"
+              : "left-[-100%] invisible md:blur-[40px] md:opacity-0"
+          }`}
+        >
+          
+        </div>
         {/* SHOPING BUTTON */}
         <button className="ml-4 w-6 h-6 stroke-[#fcfcfc]">
           <ShopingSVG />

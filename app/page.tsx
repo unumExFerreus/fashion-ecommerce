@@ -6,8 +6,6 @@ import NewArrivalTabs from "@/components/NewArrival/NewArrivalTabs";
 import {
   InstagramPost_1,
   InstagramPost_2,
-  InstagramPost_3,
-  InstagramPost_4,
 } from "@/public/images/_index";
 // icons
 import { LiaShippingFastSolid } from "react-icons/lia";
@@ -148,7 +146,7 @@ export default function Home() {
             <Image
               width={300}
               height={300}
-              src={InstagramPost_4}
+              src={InstagramPost_2}
               alt="Instagram post 4"
             />
           </div>

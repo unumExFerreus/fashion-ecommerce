@@ -41,7 +41,7 @@ export const Submenu = (props: any) => {
         <section aria-label="menu tabs">
           {/* tab button */}
           <ul className="sticky flex gap-[10%] justify-between md:justify-normal max-w-[1440px] w-full z-10">
-            {Data.menu.map((e, index) => {
+            {Data.menu.map((items, index) => {
               return (
                 <li className="relative" key={index + 1}>
                   <button
@@ -53,7 +53,7 @@ export const Submenu = (props: any) => {
                     }`}
                   >
                     <h3 className="text-[.875rem] tracking-[4px] cursor-pointer indent-1">
-                      {e.tab}
+                      {items.tab}
                     </h3>
                   </button>
                 </li>
@@ -71,7 +71,7 @@ export const Submenu = (props: any) => {
                 }`}
               >
                 <ul>
-                  {menu.items.map((e, index) => (
+                  {menu.items.map((items, index) => (
                     <motion.li
                       key={index + 1}
                       variants={animateY}
@@ -82,7 +82,7 @@ export const Submenu = (props: any) => {
                       }}
                       className="text-[#FCFCFC]/100 text-[.875rem] xs:text-[1rem] mb-2 xs:mb-5 indent-1"
                     >
-                      <Link href={e.link}>{e.name}</Link>
+                      <Link href={items.link}>{items.name}</Link>
                     </motion.li>
                   ))}
                 </ul>
