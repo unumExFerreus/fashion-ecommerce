@@ -136,9 +136,9 @@ const NewArrivalTabs = () => {
         aria-label="arrival content"
       >
         {shuffleArray(dataProduct)
-          .filter((items) => category === "All" || items.category === category)
+          .filter((items: any) => category === "All" || items.category === category)
           .slice(0, 4)
-          .map((items) => (
+          .map((items: any) => (
             <div
               // variants={animateY}
               // initial="initial"
