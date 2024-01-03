@@ -17,7 +17,9 @@ const NewArrivalTabs = () => {
 
   // filter category
   const [category, setCategory] = useState("Apparel");
-
+  const handeleClick = (event: any) => {
+    setCategory(event.target.value);
+  };
   // motions
   const animateY = {
     initial: {
