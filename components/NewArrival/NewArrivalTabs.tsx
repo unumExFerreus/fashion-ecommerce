@@ -39,9 +39,6 @@ const NewArrivalTabs = () => {
   }
 
   const result = filteredData(dataProduct, category);
-  const shuffleArray = (array: any) => {
-    return array.sort(() => Math.random() - 0.5);
-  };
 
   return (
     <>
@@ -111,23 +108,7 @@ const NewArrivalTabs = () => {
                 Bag
               </button>
             </div>
-          </li>
-          <li className="relative">
-            <div
-              onClick={() => {
-                toggleTab(5);
-              }}
-              className={`after:bg-[url('../public/images/Dot.svg')] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:scale-y-0 after:hover:scale-y-100 after:transition after:duration-[.4s] after:origin-center after:z-10 after:ease-in-out ${
-                tabOpen === 5
-                  ? "text-[#FCFCFC] duration-300 after:scale-x-100 after:scale-y-100"
-                  : "text-[#FCFCFC]/60"
-              }`}
-            >
-              <button onClick={handeleClick} value={"All"}>
-                All
-              </button>
-            </div>
-          </li>
+          </li>         
         </ul>
       </header>
       {/* tab content */}
@@ -135,8 +116,8 @@ const NewArrivalTabs = () => {
         className="flex flex-wrap justify-evenly w-full h-fit mt-4 md:mt-6 relative"
         aria-label="arrival content"
       >
-        {shuffleArray(dataProduct)
-          .filter((items: any) => category === "All" || items.category === category)
+        {dataProduct
+          .filter((items: any) => category === "" || items.category === category)
           .slice(0, 4)
           .map((items: any) => (
             <div
