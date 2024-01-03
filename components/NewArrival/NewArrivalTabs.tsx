@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import ArrivalProducts from "./ArrivalProducts";
-import ArrivalCards from "./ArrivalCards";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 // arrival data
 import dataProduct from "../../db/product";
-import Image from "next/image";
 
 const NewArrivalTabs = () => {
   const [tabOpen, setTabOpen] = useState(1);
@@ -18,27 +18,19 @@ const NewArrivalTabs = () => {
   // filter category
   const [category, setCategory] = useState("Apparel");
 
-  const handeleClick = (event: any) => {
-    setCategory(event.target.value);
+  // motions
+  const animateY = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        ease: [0.5, 0, 0, 1],
+        duration: 1,
+      },
+    },
   };
-
-  function filteredData(dataProduct: any, selected: any) {
-    let filteredProducts = dataProduct;
-
-    if (selected) {
-      filteredProducts = filteredProducts.filter(
-        (dataProduct: any) => dataProduct.category === selected
-      );
-    }
-
-    const slicedProducts = filteredProducts.slice(0, 4);
-
-    return slicedProducts.map(({ img, title, price, id }: any) => (
-      <ArrivalCards key={id} img={img} title={title} price={price} />
-    ));
-  }
-
-  const result = filteredData(dataProduct, category);
 
   return (
     <>
@@ -108,7 +100,7 @@ const NewArrivalTabs = () => {
                 Bag
               </button>
             </div>
-          </li>         
+          </li>
         </ul>
       </header>
       {/* tab content */}
@@ -117,16 +109,18 @@ const NewArrivalTabs = () => {
         aria-label="arrival content"
       >
         {dataProduct
-          .filter((items: any) => category === "" || items.category === category)
+          .filter(
+            (items: any) => category === "" || items.category === category
+          )
           .slice(0, 4)
           .map((items: any) => (
-            <div
-              // variants={animateY}
-              // initial="initial"
-              // whileInView="animate"
-              // viewport={{
-              //   once: false,
-              // }}
+            <motion.div
+              variants={animateY}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: false,
+              }}
               key={items.id}
               className="flex w-[45%] md:w-[24%] relative"
             >
@@ -147,7 +141,7 @@ const NewArrivalTabs = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         <button className="flex items-center h-0 text-[#fcfcfc] text-base md:text-2xl my-5 tenor">
           <span>Explore More</span>
