@@ -10,6 +10,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import dataProduct from "../../db/product";
 
 const NewArrivalTabs = () => {
+  // tab logic
   const [tabOpen, setTabOpen] = useState(1);
   const toggleTab = (id: any) => {
     setTabOpen(id);

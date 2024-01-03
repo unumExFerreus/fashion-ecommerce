@@ -62,7 +62,7 @@ export const Submenu = (props: any) => {
             <hr className="absolute mt-[1.793rem] w-full border-1 border-[#888]/60" />
           </ul>
           {/* tab content */}
-          <div className="sticky flex w-full h-fit max-h-[45dvh] mt-5 xs:mt-10 overflow-y-auto">
+          <div className="sticky flex w-full h-fit max-h-[45dvh] mt-5 xs:mt-10 overflow-y-auto customScroll">
             {Data.menu.map((menu, tabIndex) => (
               <div
                 key={tabIndex}

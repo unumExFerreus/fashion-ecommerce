@@ -5,6 +5,7 @@ import { Submenu } from "./Submenu";
 import LogoSVG from "../SVGs/LogoSVG";
 import SearchSVG from "../SVGs/SearchSVG";
 import ShopingSVG from "../SVGs/ShopingSVG";
+import SearchPage from "./SearchPage";
 
 const Nav = () => {
   // opem menu
@@ -20,12 +21,12 @@ const Nav = () => {
     }
   };
   // open search bar
-  const [isSearch, setIsSearch] = useState(false);
-  const toggleSearch = () => {
-    setIsSearch(!isSearch);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const toggleSearchOpen = () => {
+    setIsSearchOpen(!isSearchOpen);
 
     // disable scroll
-    if (!isSearch) {
+    if (!isSearchOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -68,7 +69,7 @@ const Nav = () => {
           </svg>
         </button>
         <div
-          className={`fixed right-0 md:left-0 bottom-0 top-0 w-full h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-40 ${
+          className={`fixed inset-0 md:left-0 w-full h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-40 ${
             isMenuOpen
               ? "left-0 visible md:opacity-100 md:blur-[0px]"
               : "left-[-100%] invisible md:blur-[40px] md:opacity-0"
@@ -90,19 +91,19 @@ const Nav = () => {
       <div className="flex items-center">
         {/* SEARCH BUTTON */}
         <button
-          onClick={toggleSearch}
+          onClick={toggleSearchOpen}
           className="ml-4 w-6 h-6 stroke-[#fcfcfc]"
         >
           <SearchSVG />
         </button>
         <div
-          className={`fixed right-0 md:left-0 bottom-0 top-0 w-full h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-40 ${
-            isSearch
-              ? "left-0 visible md:opacity-100 md:blur-[0px]"
-              : "left-[-100%] invisible md:blur-[40px] md:opacity-0"
+          className={`fixed inset-0 md:top-0 w-full h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-[51] ${
+            isSearchOpen
+              ? "top-0 visible md:opacity-100 md:blur-[0px]"
+              : "top-[100%] invisible md:blur-[40px] md:opacity-0"
           }`}
         >
-          
+          <SearchPage isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
         </div>
         {/* SHOPING BUTTON */}
         <button className="ml-4 w-6 h-6 stroke-[#fcfcfc]">
