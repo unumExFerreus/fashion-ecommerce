@@ -40,7 +40,7 @@ const SearchPage = ({ isSearchOpen, setIsSearchOpen }: any) => {
         <header className="flex flex-col justify-center w-full h-[72px]">
           <div className="flex justify-between items-center w-full">
             <form className="flex items-center w-full">
-              <button type="submit" className="flex stroke-[#fcfcfc] w-8 h-8">
+              <button type="submit" className="flex stroke-[#fcfcfc] w-6 h-6">
                 <SearchSVG />
               </button>
               <input
@@ -51,7 +51,7 @@ const SearchPage = ({ isSearchOpen, setIsSearchOpen }: any) => {
               />
             </form>
             <button
-              className="flex fill-[#fcfcfc] w-6 h-6"
+              className="flex fill-[#fcfcfc] w-4 h-4"
               onClick={toggleSearch}
             >
               <CloseSVG />

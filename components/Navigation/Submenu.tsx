@@ -13,7 +13,7 @@ import {
 } from "react-icons/ri";
 import UnderlineSVG from "../SVGs/UnderlineSVG";
 
-export const Submenu = (props: any) => {
+export const Submenu = () => {
   const [tabOpen, setTabOpen] = useState(1);
   const toggleTab = (id: any) => {
     setTabOpen(id);
@@ -59,7 +59,7 @@ export const Submenu = (props: any) => {
                 </li>
               );
             })}
-            <hr className="absolute mt-[1.793rem] w-full border-1 border-[#888]/60" />
+            <hr className="absolute mt-[28.5px] w-full border-1 border-[#888]/60" />
           </ul>
           {/* tab content */}
           <div className="sticky flex w-full h-fit max-h-[45dvh] mt-5 xs:mt-10 overflow-y-auto customScroll">
@@ -73,7 +73,7 @@ export const Submenu = (props: any) => {
                 <ul>
                   {menu.items.map((items, index) => (
                     <motion.li
-                      key={index + 1}
+                      key={index}
                       variants={animateY}
                       initial="initial"
                       whileInView="animate"

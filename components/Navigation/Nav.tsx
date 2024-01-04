@@ -69,7 +69,7 @@ const Nav = () => {
           </svg>
         </button>
         <div
-          className={`fixed inset-0 md:left-0 w-full h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-40 ${
+          className={`fixed inset-0 md:left-0 w-full min-h-[100dvh] md:duration-[1s] duration-[1.5s] ease-[cubic-bezier(.5,0,0,1)] z-40 ${
             isMenuOpen
               ? "left-0 visible md:opacity-100 md:blur-[0px]"
               : "left-[-100%] invisible md:blur-[40px] md:opacity-0"
@@ -97,7 +97,7 @@ const Nav = () => {
           <SearchSVG />
         </button>
         <div
-          className={`fixed inset-0 md:top-0 w-full h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-[51] ${
+          className={`fixed inset-0 md:top-0 w-full min-h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-[51] ${
             isSearchOpen
               ? "top-0 visible md:opacity-100 md:blur-[0px]"
               : "top-[100%] invisible md:blur-[40px] md:opacity-0"
