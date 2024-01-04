@@ -15,7 +15,7 @@ import UnderlineSVG from "../SVGs/UnderlineSVG";
 
 export const Submenu = () => {
   const [tabOpen, setTabOpen] = useState(1);
-  const toggleTab = (id: any) => {
+  const toggleTab = (id: number) => {
     setTabOpen(id);
   };
 
@@ -43,7 +43,7 @@ export const Submenu = () => {
           <ul className="sticky flex gap-[10%] justify-between md:justify-normal max-w-[1440px] w-full z-10">
             {Data.menu.map((items, index) => {
               return (
-                <li className="relative" key={index + 1}>
+                <li className="relative" key={index}>
                   <button
                     onClick={() => toggleTab(index + 1)}
                     className={`after:bg-[url('../public/images/Line.svg')] after:bottom-[-.6rem] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
@@ -59,7 +59,7 @@ export const Submenu = () => {
                 </li>
               );
             })}
-            <hr className="absolute mt-[28.5px] w-full border-1 border-[#888]/60" />
+            <hr className="absolute mt-[1.795rem] w-full border-1 border-[#888]/60" />
           </ul>
           {/* tab content */}
           <div className="sticky flex w-full h-fit max-h-[45dvh] mt-5 xs:mt-10 overflow-y-auto customScroll">

@@ -1,13 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import CloseSVG from "../SVGs/CloseSVG";
 import SearchSVG from "../SVGs/SearchSVG";
 import Image from "next/image";
 import dataProduct from "@/db/product";
 
-const SearchPage = ({ isSearchOpen, setIsSearchOpen }: any) => {
+interface SearchPageProps {
+  isSearchOpen: boolean;
+  setIsSearchOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const SearchPage: React.FC<SearchPageProps> = ({
+  isSearchOpen,
+  setIsSearchOpen,
+}) => {
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
 
@@ -65,13 +73,15 @@ const SearchPage = ({ isSearchOpen, setIsSearchOpen }: any) => {
         >
           <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-2 px-2 justify-items-center min-h-fit">
             {dataProduct
-              .filter((items: any) => {
+              .filter((items) => {
                 return search.toLowerCase() === ""
                   ? ""
-                  : items.category.toLowerCase().includes(search.toLowerCase()) ||
+                  : items.category
+                      .toLowerCase()
+                      .includes(search.toLowerCase()) ||
                       items.title.toLowerCase().includes(search.toLowerCase());
               })
-              .map((items: any) => (
+              .map((items) => (
                 <motion.div
                   variants={animateY}
                   initial="initial"

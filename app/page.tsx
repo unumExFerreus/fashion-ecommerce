@@ -123,7 +123,7 @@ export default function Home() {
             <h3>Unique designs </h3>
           </div>
         </div>
-        <div className="fill-[#fcfcfc] w-16 h-10 mx-auto mt-2 md:mt-4">
+        <div className="fill-[#fcfcfc] w-16 md:w-28 mx-auto mt-2 md:mt-8">
           <_SVG />
         </div>
       </section>
