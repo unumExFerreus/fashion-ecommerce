@@ -90,7 +90,7 @@ const SearchPage: React.FC<SearchPageProps> = ({
                     once: false,
                   }}
                   key={items.id}
-                  className="flex w-full h-fit mt-3 md:mt-6 relative"
+                  className="flex w-full h-fit mt-0 xs:mt-3 md:mt-6 relative"
                 >
                   <div className="flex w-full">
                     <div className="w-1/3">
@@ -102,17 +102,17 @@ const SearchPage: React.FC<SearchPageProps> = ({
                         className="object-contain object-top"
                       ></Image>
                     </div>
-                    <div className="flex flex-col w-2/3 mx-auto pt-1 md:pt-2 p-3">
-                      <h3 className="text-[#fcfcfc] text-base md:text-xl pt-1">
+                    <div className="flex flex-col w-2/3 mx-auto pt-0 sm:pt-1 md:pt-2 p-3">
+                      <h3 className="text-[#fcfcfc] text-base md:text-xl pt-0 sm:pt-1">
                         {items.title}
                       </h3>
-                      <h3 className="text-[#fcfcfc]/60 text-xs md:text-base pt-1">
+                      <h3 className="text-[#fcfcfc]/60 text-xs md:text-base pt-0 sm:pt-1">
                         {items.description}
                       </h3>
-                      <span className="flex text-[#DD8560] text-base md:text-xl pt-1">
+                      <span className="flex text-[#DD8560] text-base md:text-xl pt-0 sm:pt-1">
                         ${items.price}
                       </span>
-                      <div className="flex items-center text-[#fcfcfc]/60 text-xs md:text-base pt-3">
+                      <div className="flex items-center text-[#fcfcfc]/60 text-xs md:text-base pt-0 sm:pt-2 md:pt-3">
                         <div className="flex items-center text-[#DD8560]">
                           <IoIosStar />
                           <span className="font-sans text-[#fcfcfc]/60 px-1">

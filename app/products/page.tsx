@@ -89,17 +89,17 @@ const products = () => {
                     className="object-contain object-top"
                   ></Image>
                 </div>
-                <div className="flex flex-col w-2/3 mx-auto pt-1 md:pt-2 p-3">
-                  <h3 className="text-[#fcfcfc] text-base md:text-xl pt-1">
+                <div className="flex flex-col w-2/3 mx-auto pt-0 sm:pt-1 md:pt-2 p-3">
+                  <h3 className="text-[#fcfcfc] text-base md:text-xl pt-0 sm:pt-1">
                     {items.title}
                   </h3>
-                  <h3 className="text-[#fcfcfc]/60 text-xs md:text-base pt-1">
+                  <h3 className="text-[#fcfcfc]/60 text-xs md:text-base pt-0 sm:pt-1">
                     {items.description}
                   </h3>
-                  <span className="flex text-[#DD8560] text-base md:text-xl pt-1">
+                  <span className="flex text-[#DD8560] text-base md:text-xl pt-0 sm:pt-1">
                     ${items.price}
                   </span>
-                  <div className="flex items-center text-[#fcfcfc]/60 text-xs md:text-base pt-3">
+                  <div className="flex items-center text-[#fcfcfc]/60 text-xs md:text-base pt-0 sm:pt-2">
                     <div className="flex items-center text-[#DD8560]">
                       <IoIosStar />
                       <span className="font-sans text-[#fcfcfc]/60 px-1">
