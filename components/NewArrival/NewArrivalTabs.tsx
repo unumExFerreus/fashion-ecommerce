@@ -3,11 +3,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
 import { IoIosArrowRoundForward } from "react-icons/io";
-
-// arrival data
 import dataProduct from "../../db/product";
+import Link from "next/link";
 
 const NewArrivalTabs = () => {
   // tab logic
@@ -112,11 +110,9 @@ const NewArrivalTabs = () => {
         aria-label="arrival content"
       >
         {dataProduct
-          .filter(
-            (items: any) => category === "" || items.category === category
-          )
+          .filter((items) => category === "" || items.category === category)
           .slice(0, 4)
-          .map((items: any) => (
+          .map((items) => (
             <motion.div
               variants={animateY}
               initial="initial"
@@ -146,10 +142,13 @@ const NewArrivalTabs = () => {
               </div>
             </motion.div>
           ))}
-        <button className="flex items-center h-0 text-[#fcfcfc] text-base md:text-2xl my-5 tenor">
+        <Link
+          href={"/products"}
+          className="flex items-center h-0 text-[#fcfcfc] text-base md:text-2xl my-5 tenor cursor-pointer"
+        >
           <span>Explore More</span>
           <IoIosArrowRoundForward className="flex items-end" size={30} />
-        </button>
+        </Link>
       </section>
     </>
   );

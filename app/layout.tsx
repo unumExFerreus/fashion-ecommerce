@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html
       style={{ scrollbarGutter: "stable" }}
-      className="bg-[#111] scroll-smooth"
+      className="bg-[#111] scroll-smooth select-auto"
       lang="en"
     >
       <body className={inter.className}>

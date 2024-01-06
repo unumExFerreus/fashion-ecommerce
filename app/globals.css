@@ -6,6 +6,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+img {
+  user-select: none;
+}
+
 .customScroll::-webkit-scrollbar {
   width: 4px;
   background-color: transparent;

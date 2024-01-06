@@ -6,6 +6,9 @@ import CloseSVG from "../SVGs/CloseSVG";
 import SearchSVG from "../SVGs/SearchSVG";
 import Image from "next/image";
 import dataProduct from "@/db/product";
+import Link from "next/link";
+import { IoIosStar } from "react-icons/io";
+import Pagination from "../Pagination/Pagination";
 
 interface SearchPageProps {
   isSearchOpen: boolean;
@@ -27,7 +30,7 @@ const SearchPage: React.FC<SearchPageProps> = ({
     }
   };
 
-  // search filter
+  // search
   const [search, setSearch] = useState("");
   // motions
   const animateY = {
@@ -48,9 +51,6 @@ const SearchPage: React.FC<SearchPageProps> = ({
         <header className="flex flex-col justify-center w-full h-[72px]">
           <div className="flex justify-between items-center w-full">
             <form className="flex items-center w-full">
-              <button type="submit" className="flex stroke-[#fcfcfc] w-6 h-6">
-                <SearchSVG />
-              </button>
               <input
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-full bg-transparent placeholder:text-[#FCFCFC]/60 text-[#FCFCFC] text-sm py-2 px-4 focus:outline-none"
@@ -69,9 +69,9 @@ const SearchPage: React.FC<SearchPageProps> = ({
         </header>
         <section
           aria-label="search result"
-          className="sticky w-full h-[calc(100dvh-72px)] overflow-y-auto customScroll"
+          className="w-full h-[calc(95dvh-72px)]"
         >
-          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-2 px-2 justify-items-center min-h-fit">
+          <div className="sticky object-contain items-start grid grid-cols-1 md:grid-cols-2 w-full h-full overflow-y-auto customScroll">
             {dataProduct
               .filter((items) => {
                 return search.toLowerCase() === ""
@@ -90,23 +90,37 @@ const SearchPage: React.FC<SearchPageProps> = ({
                     once: false,
                   }}
                   key={items.id}
-                  className="flex relative"
+                  className="flex w-full h-fit mt-3 md:mt-6 relative"
                 >
-                  <div className="flex flex-col">
-                    <Image
-                      width={500}
-                      height={500}
-                      src={`/images/productimage/${items.img}`}
-                      alt={items.title}
-                      className="object-contain object-top"
-                    ></Image>
-                    <div className="flex-col mx-auto pt-1 md:pt-2 pb-4">
-                      <h3 className="text-center text-[#fcfcfc] text-xs md:text-sm">
+                  <div className="flex w-full">
+                    <div className="w-1/3">
+                      <Image
+                        width={500}
+                        height={500}
+                        src={`/images/productimage/${items.img}`}
+                        alt={items.title}
+                        className="object-contain object-top"
+                      ></Image>
+                    </div>
+                    <div className="flex flex-col w-2/3 mx-auto pt-1 md:pt-2 p-3">
+                      <h3 className="text-[#fcfcfc] text-base md:text-xl pt-1">
                         {items.title}
                       </h3>
-                      <span className="flex justify-center text-[#DD8560] text-sm md:text-base">
+                      <h3 className="text-[#fcfcfc]/60 text-xs md:text-base pt-1">
+                        {items.description}
+                      </h3>
+                      <span className="flex text-[#DD8560] text-base md:text-xl pt-1">
                         ${items.price}
                       </span>
+                      <div className="flex items-center text-[#fcfcfc]/60 text-xs md:text-base pt-3">
+                        <div className="flex items-center text-[#DD8560]">
+                          <IoIosStar />
+                          <span className="font-sans text-[#fcfcfc]/60 px-1">
+                            {items.rating}
+                          </span>
+                        </div>
+                        <span>Ratings</span>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
