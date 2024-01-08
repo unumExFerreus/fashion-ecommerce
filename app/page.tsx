@@ -3,10 +3,7 @@ import Image from "next/image";
 import { Hero } from "@/components/Hero/Hero";
 import NewArrivalTabs from "@/components/NewArrival/NewArrivalTabs";
 // images
-import {
-  InstagramPost_1,
-  InstagramPost_2,
-} from "@/public/images/_index";
+import { InstagramPost_1, InstagramPost_2 } from "@/public/images/_index";
 // icons
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { PiPlant } from "react-icons/pi";
@@ -23,6 +20,7 @@ import {
   Prada,
   TiffanyCo,
 } from "@/components/SVGs/brands/_index";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -152,6 +150,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

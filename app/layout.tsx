@@ -2,7 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Nav from "@/components/Navigation/Nav";
-import Footer from "@/components/Footer/Footer";
+
+import { CartProvider } from "@/Context/CartContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,10 +27,9 @@ export default function RootLayout({
         <header className="sticky top-0 w-full h-auto z-50">
           <Nav />
         </header>
-        <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
+        <main>
+          <CartProvider>{children}</CartProvider>
+        </main>
       </body>
     </html>
   );

@@ -3,12 +3,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import CloseSVG from "../SVGs/CloseSVG";
-import SearchSVG from "../SVGs/SearchSVG";
 import Image from "next/image";
-import dataProduct from "@/db/product";
-import Link from "next/link";
+import { data } from "@/db/product";
 import { IoIosStar } from "react-icons/io";
-import Pagination from "../Pagination/Pagination";
 
 interface SearchPageProps {
   isSearchOpen: boolean;
@@ -69,10 +66,10 @@ const SearchPage: React.FC<SearchPageProps> = ({
         </header>
         <section
           aria-label="search result"
-          className="w-full h-[calc(95dvh-72px)]"
+          className="w-full h-[calc(100dvh-72px)]"
         >
-          <div className="sticky object-contain items-start grid grid-cols-1 md:grid-cols-2 w-full h-full overflow-y-auto customScroll">
-            {dataProduct
+          <div className="sticky object-contain items-start grid grid-cols-1 w-full h-full overflow-y-auto customScroll">
+            {data
               .filter((items) => {
                 return search.toLowerCase() === ""
                   ? ""
@@ -90,9 +87,9 @@ const SearchPage: React.FC<SearchPageProps> = ({
                     once: false,
                   }}
                   key={items.id}
-                  className="flex w-full h-fit mt-0 xs:mt-3 md:mt-6 relative"
+                  className="flex w-full h-fit mt-0 xs:my-3 md:my-6 relative"
                 >
-                  <div className="flex w-full">
+                  <div className="flex w-full md:w-1/2">
                     <div className="w-1/3">
                       <Image
                         width={500}

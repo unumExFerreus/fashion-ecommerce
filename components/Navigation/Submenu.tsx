@@ -4,6 +4,7 @@ import Link from "next/link";
 import Data from "../../db/menu.json";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import UnderlineSVG from "../SVGs/UnderlineSVG";
 import {
   RiInstagramFill,
   RiTwitterXLine,
@@ -11,14 +12,12 @@ import {
   RiMapPinLine,
   RiPhoneLine,
 } from "react-icons/ri";
-import UnderlineSVG from "../SVGs/UnderlineSVG";
 
-export const Submenu = () => {
+export const Submenu = ({toggleMenu}: any) => {
   const [tabOpen, setTabOpen] = useState(1);
   const toggleTab = (id: number) => {
     setTabOpen(id);
   };
-
   // motion
   const animateY = {
     initial: {
@@ -82,7 +81,11 @@ export const Submenu = () => {
                       }}
                       className="text-[#FCFCFC]/100 text-[.875rem] xs:text-[1rem] mb-2 xs:mb-5 indent-1"
                     >
-                      <Link href={items.link}>{items.name}</Link>
+                      <Link href={items.link}>
+                        <button className="select-auto" onClick={toggleMenu}>
+                          {items.name}
+                        </button>
+                      </Link>
                     </motion.li>
                   ))}
                 </ul>

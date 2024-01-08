@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import dataProduct from "../../db/product";
+import { data } from "../../db/product";
 import Link from "next/link";
 
 const NewArrivalTabs = () => {
@@ -109,7 +109,7 @@ const NewArrivalTabs = () => {
         className="flex flex-wrap justify-evenly w-full h-fit mt-4 md:mt-6 relative"
         aria-label="arrival content"
       >
-        {dataProduct
+        {data
           .filter((items) => category === "" || items.category === category)
           .slice(0, 4)
           .map((items) => (

@@ -6,6 +6,7 @@ import LogoSVG from "../SVGs/LogoSVG";
 import SearchSVG from "../SVGs/SearchSVG";
 import ShopingSVG from "../SVGs/ShopingSVG";
 import SearchPage from "./SearchPage";
+import Link from "next/link";
 
 const Nav = () => {
   // opem menu
@@ -79,11 +80,11 @@ const Nav = () => {
                 : "left-[-100%] invisible md:blur-[40px] md:opacity-0"
             }`}
           >
-            <Submenu />
+            <Submenu toggleMenu={toggleMenu} />
           </div>
           {/* BACKDROP */}
           <div
-            className={`absolute inset-0 w-full h-[100dvh] backdrop-blur-[10px] bg-black/60 z-30 duration-[2s] ease-[cubic-bezier(.5,0,0,1)] md:invisible ${
+            className={`absolute inset-0 w-full h-[100dvh] bg-black/80 z-30 duration-[2s] ease-[cubic-bezier(.5,0,0,1)] md:invisible ${
               isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
           ></div>
@@ -114,7 +115,9 @@ const Nav = () => {
           </div>
           {/* SHOPING BUTTON */}
           <button className="ml-4 w-6 h-6 stroke-[#fcfcfc]">
-            <ShopingSVG />
+            <Link href={"/cart"}>
+              <ShopingSVG />
+            </Link>
           </button>
         </div>
       </div>

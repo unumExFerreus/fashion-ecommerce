@@ -3,40 +3,40 @@
     {
       "tab": "WOMEN",
       "items": [
-        { "name": "New", "link": "#" },
-        { "name": "Apparel", "link": "#" },
-        { "name": "Bag", "link": "#" },
-        { "name": "Shoes", "link": "#" },
-        { "name": "Beauty", "link": "#" },
-        { "name": "Accessories", "link": "#" }
+        { "name": "New", "link": "/products" },
+        { "name": "Apparel", "link": "/products" },
+        { "name": "Bag", "link": "/products" },
+        { "name": "Shoes", "link": "/products" },
+        { "name": "Beauty", "link": "/products" },
+        { "name": "Accessories", "link": "/products" }
       ]
     },
     {
       "tab": "MEN",
       "items": [
-        { "name": "New", "link": "#" },
-        { "name": "Apparel", "link": "#" },
-        { "name": "Bag", "link": "#" },
-        { "name": "Shoes", "link": "#" },
-        { "name": "Beauty", "link": "#" },
-        { "name": "Accessories", "link": "#" }
+        { "name": "New", "link": "/products" },
+        { "name": "Apparel", "link": "/products" },
+        { "name": "Bag", "link": "/products" },
+        { "name": "Shoes", "link": "/products" },
+        { "name": "Beauty", "link": "/products" },
+        { "name": "Accessories", "link": "/products" }
       ]
     },
     {
       "tab": "KIDS",
       "items": [
-        { "name": "New", "link": "#" },
-        { "name": "Apparel", "link": "#" },
-        { "name": "Bag", "link": "#" },
-        { "name": "Shoes", "link": "#" },
-        { "name": "Beauty", "link": "#" },
-        { "name": "Accessories", "link": "#" },
-        { "name": "New", "link": "#" },
-        { "name": "Apparel", "link": "#" },
-        { "name": "Bag", "link": "#" },
-        { "name": "Shoes", "link": "#" },
-        { "name": "Beauty", "link": "#" },
-        { "name": "Accessories", "link": "#" }
+        { "name": "New", "link": "/products" },
+        { "name": "Apparel", "link": "/products" },
+        { "name": "Bag", "link": "/products" },
+        { "name": "Shoes", "link": "/products" },
+        { "name": "Beauty", "link": "/products" },
+        { "name": "Accessories", "link": "/products" },
+        { "name": "New", "link": "/products" },
+        { "name": "Apparel", "link": "/products" },
+        { "name": "Bag", "link": "/products" },
+        { "name": "Shoes", "link": "/products" },
+        { "name": "Beauty", "link": "/products" },
+        { "name": "Accessories", "link": "/products" }
       ]
     }
   ]

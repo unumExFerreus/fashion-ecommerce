@@ -4,18 +4,17 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 1,
     title: "Apparel 1",
-    price: "120",
-    rating: "4.3",
+    price: 120,
+    rating: 4.3,
     img: "Rectangle325.png",
-    color: ["#000", "#FFF", "#DD8560"],
   },
   {
     category: "Apparel",
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 2,
     title: "Apparel 2",
-    price: "100",
-    rating: "4.3",
+    price: 100,
+    rating: 4.3,
     img: "Rectangle325.png",
   },
   {
@@ -23,8 +22,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 3,
     title: "Apparel 3",
-    price: "150",
-    rating: "4.3",
+    price: 150,
+    rating: 4.3,
     img: "Rectangle325.png",
   },
   {
@@ -32,8 +31,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 4,
     title: "Apparel 4",
-    price: "40",
-    rating: "4.3",
+    price: 40,
+    rating: 4.3,
     img: "Rectangle325.png",
   },
   {
@@ -41,8 +40,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 5,
     title: "Dress 1",
-    price: "120",
-    rating: "4.3",
+    price: 120,
+    rating: 4.3,
     img: "Rectangle325(2).png",
   },
   {
@@ -50,8 +49,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 6,
     title: "Dress 2",
-    price: "100",
-    rating: "4.3",
+    price: 100,
+    rating: 4.3,
     img: "Rectangle325(2).png",
   },
   {
@@ -59,8 +58,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 7,
     title: "Dress 3",
-    price: "150",
-    rating: "4.3",
+    price: 150,
+    rating: 4.3,
     img: "Rectangle325(2).png",
   },
   {
@@ -68,8 +67,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 8,
     title: "Dress 4",
-    price: "40",
-    rating: "4.3",
+    price: 40,
+    rating: 4.3,
     img: "Rectangle325(2).png",
   },
   {
@@ -77,8 +76,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 9,
     title: "Tshirt 1",
-    price: "120",
-    rating: "4.3",
+    price: 120,
+    rating: 4.3,
     img: "Rectangle325(3).png",
   },
   {
@@ -86,8 +85,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 10,
     title: "Tshirt 2",
-    price: "100",
-    rating: "4.3",
+    price: 100,
+    rating: 4.3,
     img: "Rectangle325(3).png",
   },
   {
@@ -95,8 +94,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 11,
     title: "Tshirt 3",
-    price: "150",
-    rating: "4.3",
+    price: 150,
+    rating: 4.3,
     img: "Rectangle325(3).png",
   },
   {
@@ -104,8 +103,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 12,
     title: "Tshirt 4",
-    price: "40",
-    rating: "4.3",
+    price: 40,
+    rating: 4.3,
     img: "Rectangle325(3).png",
   },
   {
@@ -113,8 +112,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 13,
     title: "Bag 1",
-    price: "120",
-    rating: "4.3",
+    price: 120,
+    rating: 4.3,
     img: "Rectangle325(4).png",
   },
   {
@@ -122,8 +121,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 14,
     title: "Bag 2",
-    price: "100",
-    rating: "4.3",
+    price: 100,
+    rating: 4.3,
     img: "Rectangle325(4).png",
   },
   {
@@ -131,8 +130,8 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 15,
     title: "Bag 3",
-    price: "150",
-    rating: "4.3",
+    price: 150,
+    rating: 4.3,
     img: "Rectangle325(4).png",
   },
   {
@@ -140,10 +139,16 @@ const data = [
     description: "Recycle Boucle Knit Cardigan Pink",
     id: 16,
     title: "Bag 4",
-    price: "40",
-    rating: "4.3",
+    price: 40,
+    rating: 4.3,
     img: "Rectangle325(4).png",
   },
 ];
 
-export default data;
+function getProductData(id) {
+  let productData = data.find((item) => item.id === id);
+
+  return productData;
+}
+
+export { data, getProductData };
