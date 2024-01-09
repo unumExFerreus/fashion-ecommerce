@@ -4,17 +4,15 @@ import Cart from "@/components/Cart/Cart";
 import { useContext } from "react";
 import { CartContext } from "@/Context/CartContext";
 import ShopingSVG from "@/components/SVGs/ShopingSVG";
-import { getProductData } from "@/db/product";
 
-const page = (id) => {
+const page = (id: number) => {
   const cart = useContext(CartContext);
-  const data = getProductData(id);
 
   return (
     <div className="flex flex-col justify-between w-full min-h-[calc(100dvh-72px)] max-w-[1440px] mx-auto tenor relative overflow-hidden lg:pt-5">
       <section
-        className="w-full h-full px-[.5rem] sm:px-[1rem] lg:fixed lg:px-8 lg:pl-[4rem] lg:py-[30px] lg:w-[50%] max-w-[720px] lg:h-[calc(100dvh-144px)]"
         aria-label="cart items"
+        className="w-full h-full px-[.5rem] sm:px-[1rem] lg:fixed lg:px-8 lg:pl-[4rem] lg:py-8 lg:w-[50%] max-w-[720px] lg:h-[calc(100dvh-144px)]"
       >
         <h4 className="text-[#fcfcfc] text-lg lg:text-2xl lg:mb-2">CART</h4>
         <div
@@ -31,7 +29,10 @@ const page = (id) => {
           )}
         </div>
       </section>
-      <div className="flex flex-col w-full lg:w-[calc(50%-4rem)] h-fit select-none border-t-[1px] lg:border-[1px] border-[#888]/60 lg:p-[2rem] lg:ml-[50%]">
+      <section
+        aria-label="cart payment"
+        className="flex flex-col h-fit w-full lg:w-[calc(50%-4rem)] select-none border-t-[1px] lg:border-[1px] border-[#888]/60 lg:p-[2rem] lg:ml-[50%]"
+      >
         <div className="w-full h-fit px-[.5rem] sm:px-[1rem] lg:px-0 mx-auto text-[#fcfcfc] tenor">
           <div className="flex flex-col w-full">
             <div className="flex justify-between w-full">
@@ -54,7 +55,7 @@ const page = (id) => {
           </div>
           <span className="text-[#111] text-base ml-2 mt-2">BUY NOW</span>
         </button>
-      </div>
+      </section>
     </div>
   );
 };

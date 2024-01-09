@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "@/Context/CartContext";
 
 import { getProductData } from "@/db/product";
@@ -8,7 +8,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { GoPlus, GoDash, GoTrash } from "react-icons/go";
 
-function Cart({ id, quantity }) {
+interface CartProps {
+  id: number;
+  quantity: number;
+}
+
+function Cart({ id, quantity }: CartProps) {
   const cart = useContext(CartContext);
   const data = getProductData(id);
   // motions
@@ -27,7 +32,7 @@ function Cart({ id, quantity }) {
 
   return (
     <motion.div
-      key={data.id}
+      key={data?.id}
       variants={animateY}
       initial="initial"
       whileInView="animate"
@@ -42,7 +47,7 @@ function Cart({ id, quantity }) {
             width={500}
             height={500}
             src={`/images/productimage/${data?.img}`}
-            alt={data?.title}
+            alt={data?.title ?? "Product Image"}
             className="object-contain object-top"
           ></Image>
         </div>
