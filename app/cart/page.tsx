@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { CartContext } from "@/Context/CartContext";
 import ShopingSVG from "@/components/SVGs/ShopingSVG";
 
-const page = (id: number) => {
+const page = () => {
   const cart = useContext(CartContext);
 
   return (
