@@ -92,15 +92,17 @@ export default function Page({ params }: { params: { id: any } }) {
                 ))}
               </div>
             </div>
-            <button
-              onClick={() => cart.addItemToCart(data.id)}
-              className="flex justify-center items-center w-full md:w-1/2 h-14 bg-white duration-500 active:bg-white/60 container md:px-0"
-            >
-              <div className="stroke-[#111] w-6 h-6 mr-1">
-                <IoMdAdd size={24} />
-              </div>
-              <span className="text-[#111] text-base">ADD TO CART</span>
-            </button>
+            <div className="md:container">
+              <button
+                onClick={() => cart.addItemToCart(data.id)}
+                className="flex justify-center items-center w-full md:w-1/2 h-14 bg-white duration-500 active:bg-white/60"
+              >
+                <div className="stroke-[#111] w-6 h-6 mr-1">
+                  <IoMdAdd size={24} />
+                </div>
+                <span className="text-[#111] text-base">ADD TO CART</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
