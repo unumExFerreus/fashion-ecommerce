@@ -39,14 +39,14 @@ export const Hero = () => {
   }, [currentIndex]);
 
   return (
-    <div className="overflow-hidden w-full max-w-[750px] h-full mx-auto relative select-none">
+    <div className="overflow-hidden w-full max-w-[750px] h-full mx-auto relative">
       <motion.div
         initial={{ scale: 1.2 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, ease: [0.5, 0, 0, 1] }}
         viewport={{ once: true }}
       >
-        <Image className="max-h-[998px]" priority={true} src={slides[currentIndex]} alt="" />
+        <Image className="max-h-[998px]" priority={true} src={slides[currentIndex]} alt="hero image" />
       </motion.div>
       <div className="absolute flex flex-col w-full h-[55%] justify-between bottom-0">
         <div className="relative">

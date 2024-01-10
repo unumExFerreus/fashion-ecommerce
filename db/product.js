@@ -6,6 +6,8 @@ const data = [
     title: "Apparel 1",
     price: 120,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325.png",
   },
   {
@@ -15,6 +17,8 @@ const data = [
     title: "Apparel 2",
     price: 100,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325.png",
   },
   {
@@ -24,6 +28,8 @@ const data = [
     title: "Apparel 3",
     price: 150,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325.png",
   },
   {
@@ -33,6 +39,8 @@ const data = [
     title: "Apparel 4",
     price: 40,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325.png",
   },
   {
@@ -42,6 +50,8 @@ const data = [
     title: "Dress 1",
     price: 120,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(2).png",
   },
   {
@@ -51,6 +61,8 @@ const data = [
     title: "Dress 2",
     price: 100,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(2).png",
   },
   {
@@ -60,6 +72,8 @@ const data = [
     title: "Dress 3",
     price: 150,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(2).png",
   },
   {
@@ -69,6 +83,8 @@ const data = [
     title: "Dress 4",
     price: 40,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(2).png",
   },
   {
@@ -78,6 +94,8 @@ const data = [
     title: "Tshirt 1",
     price: 120,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(3).png",
   },
   {
@@ -87,6 +105,8 @@ const data = [
     title: "Tshirt 2",
     price: 100,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(3).png",
   },
   {
@@ -96,6 +116,8 @@ const data = [
     title: "Tshirt 3",
     price: 150,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(3).png",
   },
   {
@@ -105,6 +127,8 @@ const data = [
     title: "Tshirt 4",
     price: 40,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(3).png",
   },
   {
@@ -114,6 +138,8 @@ const data = [
     title: "Bag 1",
     price: 120,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(4).png",
   },
   {
@@ -123,6 +149,8 @@ const data = [
     title: "Bag 2",
     price: 100,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(4).png",
   },
   {
@@ -132,6 +160,8 @@ const data = [
     title: "Bag 3",
     price: 150,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(4).png",
   },
   {
@@ -141,6 +171,8 @@ const data = [
     title: "Bag 4",
     price: 40,
     rating: 4.3,
+    color: ["#000", "#DD8560", "#E1E0DB"],
+    size: ["SM", "L", "XL", "2XL"],
     img: "Rectangle325(4).png",
   },
 ];

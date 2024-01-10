@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { IoIosStar } from "react-icons/io";
+import { IoIosArrowRoundForward, IoIosStar } from "react-icons/io";
 
-import React, { useContext } from "react";
-import { CartContext } from "@/Context/CartContext";
+import Link from "next/link";
 
 interface PRODUCTS_CARDS_PROPS {
   itemsData: {
@@ -20,7 +19,6 @@ interface PRODUCTS_CARDS_PROPS {
 }
 
 const ProductsCards: React.FC<PRODUCTS_CARDS_PROPS> = ({ itemsData }) => {
-  const cart = useContext(CartContext);
   // motions
   const animateY = {
     initial: {
@@ -61,30 +59,31 @@ const ProductsCards: React.FC<PRODUCTS_CARDS_PROPS> = ({ itemsData }) => {
               <h3 className="text-[#fcfcfc] text-base md:text-xl pt-0 sm:pt-1">
                 {itemsData?.title}
               </h3>
-              <h4 className="text-[#fcfcfc]/60 text-xs md:text-base pt-0 sm:pt-1">
+              <h4 className="text-[#fcfcfc]/60 text-[10px] sm:text-xs md:text-base pt-0 sm:pt-1">
                 {itemsData?.description}
               </h4>
               <span className="flex text-[#DD8560] text-base md:text-xl pt-0 sm:pt-1">
                 ${itemsData?.price}
               </span>
-            </div>
-            <div className="flex items-center text-[#fcfcfc]/60 text-xs md:text-base py-2">
-              <div className="flex items-center text-[#DD8560]">
-                <IoIosStar />
-                <span className="font-sans text-[#fcfcfc]/60 px-1">
-                  {itemsData?.rating}
-                </span>
+              <div className="flex items-center text-[#fcfcfc]/60 text-[10px] sm:text-xs md:text-base pb-0 sm:pb-1 md:pb-4">
+                <div className="flex items-center text-[#DD8560]">
+                  <IoIosStar />
+                  <span className="font-sans text-[#fcfcfc]/60 px-1">
+                    {itemsData?.rating}
+                  </span>
+                </div>
+                <span>Ratings</span>
               </div>
-              <span>Ratings</span>
             </div>
+            <Link
+              href={`/products/${itemsData.id}`}
+              className="flex items-center w-fit text-[#fcfcfc]/60 duration-300 hover:text-[#fcfcfc] text-[10px] sm:text-xs md:text-base tenor cursor-pointer"
+            >
+              See More Deatails
+              <IoIosArrowRoundForward className="flex items-end" size={30} />
+            </Link>
           </div>
         </div>
-        {/* <button
-          className="bg-black active:bg-white"
-          onClick={() => cart.addItemToCart(items.id)}
-        >
-          Add To Cart
-        </button> */}
       </motion.div>
     </>
   );

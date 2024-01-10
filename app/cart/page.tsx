@@ -35,12 +35,12 @@ const page = (id: number) => {
       >
         <div className="w-full h-fit px-[.5rem] sm:px-[1rem] lg:px-0 mx-auto text-[#fcfcfc] tenor">
           <div className="flex flex-col w-full">
-            <div className="flex justify-between w-full">
-              <span className="text-sm lg:text-2xl my-2 lg:mt-0">
+            <div className="flex justify-between w-full mt-2 mb-3 lg:mt-0">
+              <span className="text-sm lg:text-2xl">
                 Sub Total
               </span>
-              <span className="font-sans text-base">
-                $ {cart.getTotalAmount()}
+              <span className="font-sans text-base flex items-center">
+                ${cart.getTotalAmount()}
               </span>
             </div>
             <span className="text-sm lg:text-base text-[#fcfcfc]/60 mb-6">
@@ -49,7 +49,7 @@ const page = (id: number) => {
             </span>
           </div>
         </div>
-        <button className="flex justify-center items-center w-full h-14 bg-white duration-500 active:bg-white/80">
+        <button className="flex justify-center items-center w-full h-14 bg-white duration-500 active:bg-white/60">
           <div className="stroke-[#111] w-6 h-6">
             <ShopingSVG />
           </div>
