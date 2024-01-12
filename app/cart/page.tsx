@@ -25,7 +25,7 @@ const page = () => {
               <Cart key={item.id} id={item.id} quantity={item.quantity} />
             ))
           ) : (
-            <span className="text-[#fcfcfc]/60">No Items In The Cart</span>
+            <span className="text-[#fcfcfc]/60">You have no items in your Shopping Bag.</span>
           )}
         </div>
       </section>

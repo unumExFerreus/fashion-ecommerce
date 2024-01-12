@@ -44,7 +44,7 @@ const products = () => {
           <hr className="w-full border-1 border-[#888]/60 mt-1" />
         </div>
         <section
-          className="grid grid-cols-1 md:grid-cols-3 w-full h-fit mt-3 md:mt-6 relative"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  w-full h-fit mt-3 md:mt-6 relative"
           aria-label="products content"
         >
           {visibleProducts
