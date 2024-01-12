@@ -63,13 +63,13 @@ export const Hero = () => {
         </div>
         {/* SLIDE ARROWS */}
         <div className="flex justify-between text-[#fcfcfc] px-1">
-          <button onClick={prevSlide}>
+          <button aria-label="Prev image" onClick={prevSlide}>
             <SlArrowLeft
               className="w-4 sm:w-6 md:w-7 h-auto drop-shadow-[0px_0px_5px_rgba(17,17,17,1)]"
               alt="left arrow icon"
             />
           </button>
-          <button onClick={nextSlide}>
+          <button aria-label="Next image" onClick={nextSlide}>
             <SlArrowRight
               className="w-4 sm:w-6 md:w-7 h-auto drop-shadow-[0px_0px_5px_rgba(17,17,17,1)]"
               alt="right arrow icon"
@@ -78,7 +78,10 @@ export const Hero = () => {
         </div>
         <div className="flex flex-col">
           <div className="flex items-center w-fit mx-auto relative">
-            <button className="py-2 px-4 md:py-4 md:px-6  before:backdrop-blur-[1px] before:duration-500 before:absolute before:inset-0 before:w-full before:h-full before:bg-[#FCFCFC]/50 before:hover:scale-95">
+            <button
+              aria-label="See collection"
+              className="py-2 px-4 md:py-4 md:px-6  before:backdrop-blur-[1px] before:duration-500 before:absolute before:inset-0 before:w-full before:h-full before:bg-[#FCFCFC]/50 before:hover:scale-95"
+            >
               <span className="items-center text-[#111] !blur-[0px] text-[14px]">
                 EXPLORE COLLECTION
               </span>
