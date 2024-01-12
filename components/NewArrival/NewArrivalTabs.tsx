@@ -141,15 +141,13 @@ const NewArrivalTabs = () => {
               className="flex w-[45%] md:w-[24%] relative"
             >
               <div className="flex flex-col">
-                <Suspense fallback="loading...">
-                  <Image
-                    width={500}
-                    height={500}
-                    src={`/images/productimage/${items.img}`}
-                    alt={items.title}
-                    className="object-contain object-top"
-                  ></Image>
-                </Suspense>
+                <Image
+                  width={500}
+                  height={500}
+                  src={`/images/productimage/${items.img}`}
+                  alt={items.title}
+                  className="object-contain object-top"
+                ></Image>
                 <div className="flex-col mx-auto pt-1 md:pt-2 pb-4">
                   <h3 className="text-center text-[#fcfcfc] text-xs md:text-sm">
                     {items.title}
