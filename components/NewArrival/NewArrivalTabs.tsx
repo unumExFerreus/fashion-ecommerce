@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -49,7 +49,11 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button aria-label="Select tab" onClick={handeleClick} value={"Apparel"}>
+              <button
+                aria-label="Select tab"
+                onClick={handeleClick}
+                value={"Apparel"}
+              >
                 Apparel
               </button>
             </div>
@@ -65,7 +69,11 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button aria-label="Select tab" onClick={handeleClick} value={"Dress"}>
+              <button
+                aria-label="Select tab"
+                onClick={handeleClick}
+                value={"Dress"}
+              >
                 Dress
               </button>
             </div>
@@ -81,7 +89,11 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button aria-label="Select tab" onClick={handeleClick} value={"Tshirt"}>
+              <button
+                aria-label="Select tab"
+                onClick={handeleClick}
+                value={"Tshirt"}
+              >
                 Tshirt
               </button>
             </div>
@@ -97,7 +109,11 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button aria-label="Select tab" onClick={handeleClick} value={"Bag"}>
+              <button
+                aria-label="Select tab"
+                onClick={handeleClick}
+                value={"Bag"}
+              >
                 Bag
               </button>
             </div>
@@ -105,51 +121,53 @@ const NewArrivalTabs = () => {
         </ul>
       </header>
       {/* tab content */}
-      <section
-        className="flex flex-wrap justify-evenly w-full h-fit mt-4 md:mt-6 relative"
-        aria-label="arrival content"
-      >
-        {data
-          .filter((items) => category === "" || items.category === category)
-          .slice(0, 4)
-          .map((items) => (
-            <motion.div
-              variants={animateY}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: false,
-              }}
-              key={items.id}
-              className="flex w-[45%] md:w-[24%] relative"
-            >
-              <div className="flex flex-col">
-                <Image
-                  width={500}
-                  height={500}
-                  src={`/images/productimage/${items.img}`}
-                  alt={items.title}
-                  className="object-contain object-top"
-                ></Image>
-                <div className="flex-col mx-auto pt-1 md:pt-2 pb-4">
-                  <h3 className="text-center text-[#fcfcfc] text-xs md:text-sm">
-                    {items.title}
-                  </h3>
-                  <span className="flex justify-center text-[#DD8560] text-sm md:text-base">
-                    ${items.price}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        <Link
-          href={"/products"}
-          className="flex items-center h-0 text-[#fcfcfc] text-base md:text-2xl my-5 tenor cursor-pointer"
+      <Suspense fallback={"loading..."}>
+        <section
+          className="flex flex-wrap justify-evenly w-full h-fit mt-4 md:mt-6 relative"
+          aria-label="arrival content"
         >
-          <span>Explore More</span>
-          <IoIosArrowRoundForward className="flex items-end" size={30} />
-        </Link>
-      </section>
+          {data
+            .filter((items) => category === "" || items.category === category)
+            .slice(0, 4)
+            .map((items) => (
+              <motion.div
+                variants={animateY}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: false,
+                }}
+                key={items.id}
+                className="flex w-[45%] md:w-[24%] relative"
+              >
+                <div className="flex flex-col">
+                  <Image
+                    width={500}
+                    height={500}
+                    src={`/images/productimage/${items.img}`}
+                    alt={items.title}
+                    className="object-contain object-top"
+                  ></Image>
+                  <div className="flex-col mx-auto pt-1 md:pt-2 pb-4">
+                    <h3 className="text-center text-[#fcfcfc] text-xs md:text-sm">
+                      {items.title}
+                    </h3>
+                    <span className="flex justify-center text-[#DD8560] text-sm md:text-base">
+                      ${items.price}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          <Link
+            href={"/products"}
+            className="flex items-center h-0 text-[#fcfcfc] text-base md:text-2xl my-5 tenor cursor-pointer"
+          >
+            <span>Explore More</span>
+            <IoIosArrowRoundForward className="flex items-end" size={30} />
+          </Link>
+        </section>
+      </Suspense>
     </>
   );
 };
