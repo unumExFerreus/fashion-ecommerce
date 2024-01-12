@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { Banner_1, Banner_2, Banner_3 } from "../../public/images/_index";
 import DotSVG from "../SVGs/DotSVG";
+import LouadingImage from "../Loading/LouadingImage";
 
 export const Hero = () => {
   // slider images
@@ -40,14 +41,16 @@ export const Hero = () => {
 
   return (
     <div className="overflow-hidden w-full max-w-[750px] h-full mx-auto relative">
-      <motion.div
-        initial={{ scale: 1.2 }}
-        whileInView={{ scale: 1 }}
-        transition={{ duration: 3, ease: [0.5, 0, 0, 1] }}
-        viewport={{ once: true }}
-      >
-        <Image priority={true} src={slides[currentIndex]} alt="hero image" />
-      </motion.div>
+      <Suspense fallback={<LouadingImage />}>
+        <motion.div
+          initial={{ scale: 1.2 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 3, ease: [0.5, 0, 0, 1] }}
+          viewport={{ once: true }}
+        >
+          <Image priority={true} src={slides[currentIndex]} alt="hero image" />
+        </motion.div>
+      </Suspense>
       <div className="absolute flex flex-col w-full h-[55%] justify-between bottom-0">
         <div className="relative">
           <h1 className="w-fit mr-[8%] mx-auto text-2xl sm:text-3xl md:text-5xl text-[#FCFCFC] tracking-[1.5px] md:tracking-[3px] moda z-10">
