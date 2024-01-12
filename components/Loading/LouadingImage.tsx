@@ -4,7 +4,7 @@ const LouadingImage = () => {
   return (
     <section
       aria-label="Louading image screen"
-      className="bg-[#fff] w-full h-full"
+      className="absolute bg-[#333] w-full h-full inset-0"
     ></section>
   );
 };
