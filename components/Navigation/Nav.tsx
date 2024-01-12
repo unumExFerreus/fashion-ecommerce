@@ -41,6 +41,7 @@ const Nav = () => {
         <div className="flex items-center">
           {/* CUSTOM SVG FOR MENU BUTTON */}
           <button
+            aria-label="Menu button"
             className="z-50 mr-[56px] fill-[#fcfcfc]"
             onClick={toggleMenu}
           >
@@ -96,6 +97,7 @@ const Nav = () => {
         <div className="flex items-center">
           {/* SEARCH BUTTON */}
           <button
+            aria-label="Search button"
             onClick={toggleSearchOpen}
             className="ml-4 w-6 h-6 stroke-[#fcfcfc]"
           >
@@ -114,7 +116,10 @@ const Nav = () => {
             />
           </div>
           {/* SHOPING BUTTON */}
-          <button className="ml-4 w-6 h-6 stroke-[#fcfcfc]">
+          <button
+            aria-label="Cart button"
+            className="ml-4 w-6 h-6 stroke-[#fcfcfc]"
+          >
             <Link href={"/cart"}>
               <ShopingSVG />
             </Link>

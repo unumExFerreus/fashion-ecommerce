@@ -36,9 +36,7 @@ const page = () => {
         <div className="w-full h-fit px-[.5rem] sm:px-[1rem] lg:px-0 mx-auto text-[#fcfcfc] tenor">
           <div className="flex flex-col w-full">
             <div className="flex justify-between w-full mt-2 mb-3 lg:mt-0">
-              <span className="text-sm lg:text-2xl">
-                Sub Total
-              </span>
+              <span className="text-sm lg:text-2xl">Sub Total</span>
               <span className="font-sans text-base flex items-center">
                 ${cart.getTotalAmount()}
               </span>
@@ -49,7 +47,10 @@ const page = () => {
             </span>
           </div>
         </div>
-        <button className="flex justify-center items-center w-full h-14 bg-white duration-500 active:bg-white/60">
+        <button
+          aria-label="Buy"
+          className="flex justify-center items-center w-full h-14 bg-white duration-500 active:bg-white/60"
+        >
           <div className="stroke-[#111] w-6 h-6">
             <ShopingSVG />
           </div>

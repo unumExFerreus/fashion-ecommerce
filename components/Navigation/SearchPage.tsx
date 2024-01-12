@@ -56,6 +56,7 @@ const SearchPage: React.FC<SearchPageProps> = ({
               />
             </form>
             <button
+              aria-label="Close search"
               className="flex fill-[#fcfcfc] w-4 h-4"
               onClick={toggleSearch}
             >

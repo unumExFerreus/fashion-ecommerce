@@ -10,7 +10,7 @@ const products = () => {
   // pagination
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
-  const productsPerPage = 8;
+  const productsPerPage = 9;
 
   const filteredProducts = data.filter(
     (item) =>
@@ -31,7 +31,7 @@ const products = () => {
 
   return (
     <div className="tenor">
-      <div className="container max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto">
         <div>
           <form className="flex items-center w-full select-none">
             <input
@@ -44,7 +44,7 @@ const products = () => {
           <hr className="w-full border-1 border-[#888]/60 mt-1" />
         </div>
         <section
-          className="grid grid-cols-1 md:grid-cols-2 w-full h-fit mt-3 md:mt-6 relative"
+          className="grid grid-cols-1 md:grid-cols-3 w-full h-fit mt-3 md:mt-6 relative"
           aria-label="products content"
         >
           {visibleProducts

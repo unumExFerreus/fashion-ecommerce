@@ -49,7 +49,7 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button onClick={handeleClick} value={"Apparel"}>
+              <button aria-label="Select tab" onClick={handeleClick} value={"Apparel"}>
                 Apparel
               </button>
             </div>
@@ -65,7 +65,7 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button onClick={handeleClick} value={"Dress"}>
+              <button aria-label="Select tab" onClick={handeleClick} value={"Dress"}>
                 Dress
               </button>
             </div>
@@ -81,7 +81,7 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button onClick={handeleClick} value={"Tshirt"}>
+              <button aria-label="Select tab" onClick={handeleClick} value={"Tshirt"}>
                 Tshirt
               </button>
             </div>
@@ -97,7 +97,7 @@ const NewArrivalTabs = () => {
                   : "text-[#FCFCFC]/60"
               }`}
             >
-              <button onClick={handeleClick} value={"Bag"}>
+              <button aria-label="Select tab" onClick={handeleClick} value={"Bag"}>
                 Bag
               </button>
             </div>

@@ -33,8 +33,8 @@ export default function Page({ params }: { params: { id: any } }) {
   const cart = useContext(CartContext);
 
   return !data ? (
-    <span className="flex justify-center text-[#fcfcfc] text-lg my-10">
-      PAGE FOR URL NOT FOUND
+    <span className="flex justify-center text-[#fcfcfc] text-lg my-10 tenor">
+      PAGE FOR THIS URL NOT FOUND
     </span>
   ) : (
     <div>
@@ -72,6 +72,7 @@ export default function Page({ params }: { params: { id: any } }) {
                 <h3 className="mr-2">Color</h3>
                 {data.color.map((color) => (
                   <button
+                    aria-label="Select color"
                     key={color}
                     style={{
                       backgroundColor: color,
@@ -89,6 +90,7 @@ export default function Page({ params }: { params: { id: any } }) {
                 <h3 className="mr-2">Size</h3>
                 {data.size.map((size) => (
                   <button
+                    aria-label="Select size"
                     key={size}
                     className={`mx-1 w-8 h-8 text-[10px] md:text-xs bg-[#000] outline outline-offset-0 outline-[.5px] rounded-full duration-300 ${
                       selectedSize === size
@@ -104,6 +106,7 @@ export default function Page({ params }: { params: { id: any } }) {
             </div>
             <div>
               <button
+                aria-label="Add to cart"
                 onClick={() => cart.addItemToCart(data.id)}
                 className="flex justify-center items-center w-full md:w-3/4 h-14 bg-white duration-500 active:bg-white/60"
               >
@@ -121,7 +124,7 @@ export default function Page({ params }: { params: { id: any } }) {
         className="container max-w-[1440px] mx-auto tenor grid md:grid-cols-2 md:gap-20"
       >
         <div>
-          <div className="mt-10">
+          <div className="mt-10 md:mt-20">
             <h3 className="text-sm md:text-base text-[#fcfcfc]">MATERIALS</h3>
             <p className="text-xs md:text-sm text-[#fcfcfc]/60 mt-1">
               We work with monitoring programmes to ensure compliance with
@@ -164,7 +167,7 @@ export default function Page({ params }: { params: { id: any } }) {
             </ul>
           </div>
         </div>
-        <section aria-label="accordion" className="w-full mt-6">
+        <section aria-label="accordion" className="w-full mt-6 md:mt-16">
           <Accordion />
         </section>
       </section>

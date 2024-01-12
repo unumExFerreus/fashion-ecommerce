@@ -13,7 +13,7 @@ import {
   RiPhoneLine,
 } from "react-icons/ri";
 
-export const Submenu = ({toggleMenu}: any) => {
+export const Submenu = ({ toggleMenu }: any) => {
   const [tabOpen, setTabOpen] = useState(1);
   const toggleTab = (id: number) => {
     setTabOpen(id);
@@ -44,6 +44,7 @@ export const Submenu = ({toggleMenu}: any) => {
               return (
                 <li className="relative" key={index}>
                   <button
+                    aria-label="Select tab"
                     onClick={() => toggleTab(index + 1)}
                     className={`after:bg-[url('../public/images/Line.svg')] after:bottom-[-.6rem] after:block after:absolute after:h-[10px] after:w-full after:bg-center after:bg-cover after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-[.4s] after:origin-center after:z-50 after:ease-in-out ${
                       tabOpen === index + 1
@@ -82,7 +83,11 @@ export const Submenu = ({toggleMenu}: any) => {
                       className="text-[#FCFCFC]/100 text-[.875rem] xs:text-[1rem] mb-2 xs:mb-5 indent-1"
                     >
                       <Link href={items.link}>
-                        <button className="select-auto" onClick={toggleMenu}>
+                        <button
+                          aria-label="List item button"
+                          className="select-auto"
+                          onClick={toggleMenu}
+                        >
                           {items.name}
                         </button>
                       </Link>

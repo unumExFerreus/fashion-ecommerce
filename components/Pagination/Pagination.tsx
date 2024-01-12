@@ -26,8 +26,8 @@ const Pagination: React.FC<PaginationProps> = ({ pageCount, onPageChange }) => {
       marginPagesDisplayed={2}
       pageRangeDisplayed={5}
       onPageChange={onPageChange}
-      containerClassName={"flex justify-evenly items-center w-1/2 md:w-1/4 mx-auto relative bg-[#111] select-none"}
-      activeClassName={"flex justify-evenly items-center w-8 h- md:w-12 md:h-8 bg-[#888888]/60 tranition-all duration-500 "}
+      containerClassName={"flex justify-evenly items-center w-1/2 md:max-w-[20%] mx-auto relative bg-[#111] select-none"}
+      activeClassName={"flex justify-evenly rounded-full items-center w-8 h-8 md:w-10 md:h-10 bg-[#888888]/60 tranition-all duration-500"}
     />
   );
 };
