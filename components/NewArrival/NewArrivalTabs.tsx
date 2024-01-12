@@ -121,26 +121,27 @@ const NewArrivalTabs = () => {
         </ul>
       </header>
       {/* tab content */}
-      <Suspense fallback={"loading..."}>
-        <section
-          className="flex flex-wrap justify-evenly w-full h-fit mt-4 md:mt-6 relative"
-          aria-label="arrival content"
-        >
-          {data
-            .filter((items) => category === "" || items.category === category)
-            .slice(0, 4)
-            .map((items) => (
-              <motion.div
-                variants={animateY}
-                initial="initial"
-                whileInView="animate"
-                viewport={{
-                  once: false,
-                }}
-                key={items.id}
-                className="flex w-[45%] md:w-[24%] relative"
-              >
-                <div className="flex flex-col">
+
+      <section
+        className="flex flex-wrap justify-evenly w-full h-fit mt-4 md:mt-6 relative"
+        aria-label="arrival content"
+      >
+        {data
+          .filter((items) => category === "" || items.category === category)
+          .slice(0, 4)
+          .map((items) => (
+            <motion.div
+              variants={animateY}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: false,
+              }}
+              key={items.id}
+              className="flex w-[45%] md:w-[24%] relative"
+            >
+              <div className="flex flex-col">
+                <Suspense fallback="loading...">
                   <Image
                     width={500}
                     height={500}
@@ -148,26 +149,26 @@ const NewArrivalTabs = () => {
                     alt={items.title}
                     className="object-contain object-top"
                   ></Image>
-                  <div className="flex-col mx-auto pt-1 md:pt-2 pb-4">
-                    <h3 className="text-center text-[#fcfcfc] text-xs md:text-sm">
-                      {items.title}
-                    </h3>
-                    <span className="flex justify-center text-[#DD8560] text-sm md:text-base">
-                      ${items.price}
-                    </span>
-                  </div>
+                </Suspense>
+                <div className="flex-col mx-auto pt-1 md:pt-2 pb-4">
+                  <h3 className="text-center text-[#fcfcfc] text-xs md:text-sm">
+                    {items.title}
+                  </h3>
+                  <span className="flex justify-center text-[#DD8560] text-sm md:text-base">
+                    ${items.price}
+                  </span>
                 </div>
-              </motion.div>
-            ))}
-          <Link
-            href={"/products"}
-            className="flex items-center h-0 text-[#fcfcfc] text-base md:text-2xl my-5 tenor cursor-pointer"
-          >
-            <span>Explore More</span>
-            <IoIosArrowRoundForward className="flex items-end" size={30} />
-          </Link>
-        </section>
-      </Suspense>
+              </div>
+            </motion.div>
+          ))}
+        <Link
+          href={"/products"}
+          className="flex items-center h-0 text-[#fcfcfc] text-base md:text-2xl my-5 tenor cursor-pointer"
+        >
+          <span>Explore More</span>
+          <IoIosArrowRoundForward className="flex items-end" size={30} />
+        </Link>
+      </section>
     </>
   );
 };
