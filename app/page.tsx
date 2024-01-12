@@ -136,14 +136,14 @@ export default function Home() {
           <div className="grid grid-cols-2 md:flex md:justify-center gap-4 mx-4 md:mx-auto mt-2 justify-items-center items-center drop-shadow-xl">
             <Image
               width={300}
-              height={400}
+              height={300}
               src={InstagramPost_1}
               alt="Instagram post 1"
             />
 
             <Image
               width={300}
-              height={400}
+              height={300}
               src={InstagramPost_2}
               alt="Instagram post 2"
             />
