@@ -6,19 +6,19 @@ const Footer = () => {
   return (
     <>
       <div className="flex mx-auto w-[45%] sm:w-[40%] md:w-[25%] lg:w-[12%] justify-between mt-10 md:mt-24 py-4">
-        <Link href={"#"}>
+        <Link href={"#"} aria-label="Go to instagram">
           <RiInstagramFill
             className="fill-[#fcfcfc] w-6 h-6 md:w-8 md:h-8"
-            alt="instagram icon"
+            alt="Instagram icon"
           />
         </Link>
-        <Link href={"#"}>
+        <Link href={"#"} aria-label="Go to X">
           <RiTwitterXLine
             className="fill-[#fcfcfc] w-6 h-6 md:w-8 md:h-8"
             alt="X icon"
           />
         </Link>
-        <Link href={"#"}>
+        <Link href={"#"} aria-label="Go to youtube">
           <RiYoutubeFill
             className="fill-[#fcfcfc] w-6 h-6 md:w-8 md:h-8"
             alt="Youtube icon"
