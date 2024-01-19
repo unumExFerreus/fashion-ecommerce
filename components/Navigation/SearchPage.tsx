@@ -1,11 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { FormEvent, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import CloseSVG from "../SVGs/CloseSVG";
-import Image from "next/image";
-import { data } from "@/db/product";
-import { IoIosStar } from "react-icons/io";
 
 interface SearchPageProps {
   isSearchOpen: boolean;
@@ -18,41 +15,32 @@ const SearchPage: React.FC<SearchPageProps> = ({
 }) => {
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
-
-    // disable scroll
-    if (!isSearchOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
   };
 
+  const inputRef = useRef<HTMLInputElement>(null);
+  
   // search
   const [search, setSearch] = useState("");
-  // motions
-  const animateY = {
-    initial: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-      transition: {
-        ease: [0.5, 0, 0, 1],
-        duration: 1,
-      },
-    },
+  const router = useRouter();
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push(`/searchpage/${search}`);
+    setSearch("");
   };
+
   return (
-    <div className="w-full h-full bg-[#111] tenor">
-      <div className="container max-w-[1440px] mx-auto">
-        <header className="flex flex-col justify-center w-full h-[72px]">
+    <div className="flex items-center justify-start w-full h-full bg-[#111] tenor">
+      <div className="container max-w-[1440px] mx-auto relative">
+        <header className="flex flex-col justify-center w-full h-full">
           <div className="flex justify-between items-center w-full">
-            <form className="flex items-center w-full">
+            <form onSubmit={handleSubmit} className="flex items-center w-full">
               <input
+                type="text"
+                value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-transparent placeholder:text-[#FCFCFC]/60 text-[#FCFCFC] text-sm py-2 px-4 focus:outline-none"
-                type="search"
                 placeholder="Search items"
+                className="w-full bg-transparent placeholder:text-[#FCFCFC]/60 text-[#FCFCFC] text-sm focus:outline-none"
               />
             </form>
             <button
@@ -63,68 +51,8 @@ const SearchPage: React.FC<SearchPageProps> = ({
               <CloseSVG />
             </button>
           </div>
-          <hr className="w-full border-1 border-[#888]/60 mt-1" />
         </header>
-        <section
-          aria-label="search result"
-          className="w-full h-[calc(100dvh-72px)]"
-        >
-          <div className="sticky object-contain items-start grid grid-cols-1 w-full h-full overflow-y-auto customScroll">
-            {data
-              .filter((items) => {
-                return search.toLowerCase() === ""
-                  ? ""
-                  : items.category
-                      .toLowerCase()
-                      .includes(search.toLowerCase()) ||
-                      items.title.toLowerCase().includes(search.toLowerCase());
-              })
-              .map((items) => (
-                <motion.div
-                  variants={animateY}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: false,
-                  }}
-                  key={items.id}
-                  className="flex w-full h-fit mt-0 xs:my-3 md:my-6 relative"
-                >
-                  <div className="flex w-full md:w-1/2">
-                    <div className="w-1/3">
-                      <Image
-                        width={500}
-                        height={500}
-                        src={`/images/productimage/${items.img}`}
-                        alt={items.title}
-                        className="object-contain object-top"
-                      ></Image>
-                    </div>
-                    <div className="flex flex-col w-2/3 mx-auto pt-0 sm:pt-1 md:pt-2 p-3">
-                      <h3 className="text-[#fcfcfc] text-base md:text-xl pt-0 sm:pt-1">
-                        {items.title}
-                      </h3>
-                      <h3 className="text-[#fcfcfc]/60 text-xs md:text-base pt-0 sm:pt-1">
-                        {items.description}
-                      </h3>
-                      <span className="flex text-[#DD8560] text-base md:text-xl pt-0 sm:pt-1">
-                        ${items.price}
-                      </span>
-                      <div className="flex items-center text-[#fcfcfc]/60 text-xs md:text-base pt-0 sm:pt-2 md:pt-3">
-                        <div className="flex items-center text-[#DD8560]">
-                          <IoIosStar />
-                          <span className="font-sans text-[#fcfcfc]/60 px-1">
-                            {items.rating}
-                          </span>
-                        </div>
-                        <span>Ratings</span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-          </div>
-        </section>
+        <hr className="flex items-end w-full border-1 border-[#888]/60 mt-1" />
       </div>
     </div>
   );

@@ -121,7 +121,6 @@ const NewArrivalTabs = () => {
         </ul>
       </header>
       {/* tab content */}
-
       <section
         className="flex flex-wrap justify-evenly w-full h-fit mt-4 md:mt-6 relative"
         aria-label="arrival content"

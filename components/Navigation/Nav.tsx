@@ -25,17 +25,10 @@ const Nav = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const toggleSearchOpen = () => {
     setIsSearchOpen(!isSearchOpen);
-
-    // disable scroll
-    if (!isSearchOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
   };
 
   return (
-    <nav className="flex w-full h-[72px] bg-[#111] select-none z-50">
+    <nav className="flex w-full h-[60px] bg-[#111] select-none z-50">
       <div className="flex justify-between container max-w-[1440px] w-full mx-auto py-5">
         {/* slider */}
         <div className="flex items-center">
@@ -104,10 +97,8 @@ const Nav = () => {
             <SearchSVG />
           </button>
           <div
-            className={`fixed inset-0 md:top-0 w-full min-h-[100dvh] md:duration-[1s] duration-[1.8s] ease-[cubic-bezier(.5,0,0,1)] z-[51] ${
-              isSearchOpen
-                ? "top-0 visible md:opacity-100 md:blur-[0px]"
-                : "top-[100%] invisible md:blur-[40px] md:opacity-0"
+            className={`absolute right-0 left-0 w-full h-10 duration-700 ease-[cubic-bezier(.5,0,0,1)] z-[-1] ${
+              isSearchOpen ? "top-[60px] visible" : "top-0 invisible"
             }`}
           >
             <SearchPage
