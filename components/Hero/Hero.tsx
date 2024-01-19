@@ -46,7 +46,7 @@ export const Hero = () => {
         transition={{ duration: 3, ease: [0.5, 0, 0, 1] }}
         viewport={{ once: true }}
       >
-        <Image priority={true} src={slides[currentIndex]} alt="hero image" />
+        <Image priority={false} src={slides[currentIndex]} alt="hero image" />
       </motion.div>
       <div className="absolute flex flex-col w-full h-[55%] justify-between bottom-0">
         <div className="relative">

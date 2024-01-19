@@ -1,14 +1,13 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Hero } from "@/components/Hero/Hero";
 import NewArrivalTabs from "@/components/NewArrival/NewArrivalTabs";
-// images
+
 import { InstagramPost_1, InstagramPost_2 } from "@/public/images/_index";
-// icons
+
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { PiPlant } from "react-icons/pi";
 import { MdOutlineHighQuality, MdOutlineDesignServices } from "react-icons/md";
-// svgs
+
 import UnderlineSVG from "@/components/SVGs/UnderlineSVG";
 import LogoSVG from "@/components/SVGs/LogoSVG";
 import _SVG from "@/components/SVGs/_SVG";
@@ -47,8 +46,8 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="w-full h-full mt-10 md:mt-24 container max-w-[1440px] xs:px-0 mx-auto"
         aria-label="brand logos"
+        className="w-full h-full mt-10 md:mt-24 container max-w-[1440px] xs:px-0 mx-auto"
       >
         <div className="flex flex-col justify-center w-full mx-auto">
           <div className="w-1/3 md:w-1/4 xl:w-[15%] mx-auto fill-[#fcfcfc]">
@@ -80,8 +79,8 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="w-full h-full mt-10 md:mt-24 mx-auto"
         aria-label="about company"
+        className="w-full h-full mt-10 md:mt-24 mx-auto"
       >
         <div className="flex justify-center mx-auto fill-[#fcfcfc] w-20 md:w-32">
           <LogoSVG />

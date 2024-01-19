@@ -111,7 +111,7 @@ const Nav = () => {
             aria-label="Cart button"
             className="ml-4 w-6 h-6 stroke-[#fcfcfc]"
           >
-            <Link href={"/cart"}>
+            <Link href={"/cart"} aria-label="Go to shopping cart">
               <ShopingSVG />
             </Link>
           </button>

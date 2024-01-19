@@ -120,16 +120,16 @@ export const Submenu = ({ toggleMenu }: any) => {
             <UnderlineSVG />
           </div>
           <div className="flex mx-auto w-[45%] sm:w-[40%] md:w-[25%] lg:w-[15%] justify-between">
-            <Link href={"#"}>
+            <Link href={"#"} aria-label="Go to instagram">
               <RiInstagramFill
                 className="fill-[#fcfcfc] w-6 h-6"
-                alt="instagram icon"
+                alt="Instagram icon"
               />
             </Link>
-            <Link href={"#"}>
+            <Link href={"#"} aria-label="Go to X">
               <RiTwitterXLine className="fill-[#fcfcfc] w-6 h-6" alt="X icon" />
             </Link>
-            <Link href={"#"}>
+            <Link href={"#"} aria-label="Go to youtube">
               <RiYoutubeFill
                 className="fill-[#fcfcfc] w-6 h-6"
                 alt="Youtube icon"
