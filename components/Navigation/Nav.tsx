@@ -84,9 +84,12 @@ const Nav = () => {
           ></div>
         </div>
         {/* NAV ICONS */}
-        <div className="flex justify-center items-center fill-[#fcfcfc] w-20 md:w-24 h-auto p-[1px]">
+        <Link
+          href={"/"}
+          className="flex justify-center items-center fill-[#fcfcfc] w-20 md:w-24 h-auto p-[1px]"
+        >
           <LogoSVG />
-        </div>
+        </Link>
         <div className="flex items-center">
           {/* SEARCH BUTTON */}
           <button

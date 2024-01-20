@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/Footer/Footer";
 import ProductsCards from "@/components/ProductsCards/ProductsCards";
 import { data } from "@/db/product";
 
@@ -26,13 +27,21 @@ const SearchResults = ({ params }) => {
   }
 
   return (
-    <section aria-label="search results" className="container max-w-[1440px] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 w-full h-fit mt-6 relative">
-        {filteredItems.map((item) => (
-          <ProductsCards key={item.id} itemsData={item} />
-        ))}
-      </div>
-    </section>
+    <>
+      <section
+        aria-label="search results"
+        className="md:container max-w-[1440px] mx-auto"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full h-fit my-6 relative">
+          {filteredItems.map((item) => (
+            <ProductsCards key={item.id} itemsData={item} />
+          ))}
+        </div>
+      </section>
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 };
 

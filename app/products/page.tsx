@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 import { data } from "@/db/product";
 import Pagination from "@/components/Pagination/Pagination";
@@ -10,7 +10,6 @@ import ProductsCards from "@/components/ProductsCards/ProductsCards";
 const products = () => {
   const productData = data;
   // pagination
-  const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
   const productsPerPage = 9;
 
@@ -27,8 +26,8 @@ const products = () => {
   );
 
   return (
-    <div className="tenor">
-      <div className="container max-w-[1440px] mx-auto">
+    <div className=" max-w-[1440px] mx-auto tenor">
+      <div className="md:container">
         <section
           className="grid grid-cols-1 md:grid-cols-3 w-full h-fit mt-3 md:mt-6 relative"
           aria-label="products content"
