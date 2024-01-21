@@ -54,7 +54,7 @@ const ProductsCards = ({ itemsData }: { itemsData: DATAPROPS }) => {
               className="object-cover object-top"
             />
           </Link>
-          <div className="flex flex-col w-2/3 mx-auto pt-0 px-3 ">
+          <div className="flex flex-col w-2/3 mx-auto pt-0 px-3">
             <div>
               <h3 className="text-[#fcfcfc] text-base md:text-xl pt-0 sm:pt-1">
                 {itemsData?.title}

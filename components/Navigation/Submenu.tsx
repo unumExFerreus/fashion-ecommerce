@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import Data from "../../db/menu.json";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+import Data from "../../db/menu.json";
 import UnderlineSVG from "../SVGs/UnderlineSVG";
 import {
   RiInstagramFill,

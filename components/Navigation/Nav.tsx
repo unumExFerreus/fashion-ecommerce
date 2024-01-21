@@ -32,7 +32,7 @@ const Nav = () => {
       <div className="flex justify-between container max-w-[1440px] w-full mx-auto py-5">
         {/* slider */}
         <div className="flex items-center">
-          {/* CUSTOM SVG FOR MENU BUTTON */}
+          {/* Custom SVG for meno button */}
           <button
             aria-label="Menu button"
             className="z-50 mr-[56px] fill-[#fcfcfc]"
@@ -91,7 +91,7 @@ const Nav = () => {
           <LogoSVG />
         </Link>
         <div className="flex items-center">
-          {/* SEARCH BUTTON */}
+          {/* Search button */}
           <button
             aria-label="Search button"
             onClick={toggleSearchOpen}
@@ -109,7 +109,7 @@ const Nav = () => {
               setIsSearchOpen={setIsSearchOpen}
             />
           </div>
-          {/* SHOPING BUTTON */}
+          {/* Cart button */}
           <button
             aria-label="Cart button"
             className="ml-4 w-6 h-6 stroke-[#fcfcfc]"
