@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { Banner_1, Banner_2, Banner_3 } from "../../public/images/_index";
 import DotSVG from "../SVGs/DotSVG";
+import Link from "next/link";
 
 export const Hero = () => {
   // slider images
@@ -82,9 +83,9 @@ export const Hero = () => {
               aria-label="See collection"
               className="py-2 px-4 md:py-4 md:px-6  before:backdrop-blur-[1px] before:duration-500 before:absolute before:inset-0 before:w-full before:h-full before:bg-[#FCFCFC]/50 before:hover:scale-95"
             >
-              <span className="items-center text-[#111] !blur-[0px] text-[14px]">
+              <Link href={"/products"} className="items-center text-[#111] !blur-[0px] text-[14px]">
                 EXPLORE COLLECTION
-              </span>
+              </Link>
             </button>
           </div>
           <div className="flex justify-center items-center w-fit mx-auto my-[2%] cursor-pointer drop-shadow-[0px_0px_8px_rgba(17,17,17,1)]">

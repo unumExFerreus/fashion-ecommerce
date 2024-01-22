@@ -20,7 +20,7 @@ const SearchResults = ({ params }) => {
   console.log(filteredItems);
   if (filteredItems.length === 0) {
     return (
-      <p className="text-lg md:text-xl text-[#fcfcfc] w-full h-[calc(100dvh-72px)] flex justify-center items-center">
+      <p className="text-lg md:text-xl text-[#fcfcfc] w-full h-[calc(100dvh-60px)] flex justify-center items-center">
         No results found for {params.term}
       </p>
     );

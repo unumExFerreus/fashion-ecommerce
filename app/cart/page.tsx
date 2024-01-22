@@ -9,7 +9,7 @@ const page = () => {
   const cart = useContext(CartContext);
 
   return (
-    <div className="flex flex-col justify-between w-full min-h-[calc(100dvh-72px)] max-w-[1440px] mx-auto tenor relative overflow-hidden lg:pt-5">
+    <div className="flex flex-col justify-between w-full min-h-[calc(100dvh-60px)] max-w-[1440px] mx-auto tenor relative overflow-hidden lg:pt-5">
       <section
         aria-label="cart items"
         className="w-full h-full px-[.5rem] sm:px-[1rem] lg:fixed lg:px-8 lg:pl-[4rem] lg:py-8 lg:w-[50%] max-w-[720px] lg:h-[calc(100dvh-144px)]"

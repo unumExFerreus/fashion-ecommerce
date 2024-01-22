@@ -37,7 +37,7 @@ export const Submenu = ({ toggleMenu }: any) => {
 
   return (
     <div className="w-full h-full bg-[#111] tenor">
-      <div className="flex flex-col h-[100dvh] justify-between container w-full max-w-[1460px] mx-auto pt-[72px] relative">
+      <div className="flex flex-col h-[100dvh] justify-between container w-full max-w-[1460px] mx-auto pt-[60px] relative">
         <section aria-label="menu tabs">
           {/* tab button */}
           <ul className="sticky flex gap-[10%] justify-between md:justify-normal max-w-[1440px] w-full z-10">
