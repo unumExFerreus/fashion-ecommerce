@@ -8,8 +8,8 @@ import { CartProvider } from "@/Context/CartContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "open fashion",
-  description: "no idea",
+  title: "Open Fashion",
+  description: "Open Fashion Shop",
 };
 
 export default function RootLayout({
