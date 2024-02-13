@@ -92,9 +92,9 @@ const NewArrivalTabs = () => {
               <button
                 aria-label="Select tab"
                 onClick={handeleClick}
-                value={"Tshirt"}
+                value={"Shirt"}
               >
-                Tshirt
+                Shirt
               </button>
             </div>
           </li>
@@ -141,11 +141,11 @@ const NewArrivalTabs = () => {
             >
               <div className="flex flex-col">
                 <Image
-                  width={500}
-                  height={500}
+                  width={300}
+                  height={400}
                   src={`/images/productimage/${items.img}`}
                   alt={items.title}
-                  className="object-contain object-top"
+                  className="object-cover object-top max-h-[350px]"
                 ></Image>
                 <div className="flex-col mx-auto pt-1 md:pt-2 pb-4">
                   <h3 className="text-center text-[#fcfcfc] text-xs md:text-sm">

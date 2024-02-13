@@ -20,6 +20,7 @@ import {
   TiffanyCo,
 } from "@/components/SVGs/brands/_index";
 import Footer from "@/components/Footer/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -125,27 +126,30 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="w-full h-full mx-auto mt-10 md:mt-24"
+        className="w-full h-full mx-auto mt-8 md:mt-20"
         aria-label="social media"
       >
         <div>
-          <span className="flex justify-center text-base sm:text-xl md:text-3xl text-[#FCFCFC] tracking-[1.5px] md:tracking-[3px] tenor">
+          <span className="flex justify-center text-base sm:text-xl md:text-3xl text-[#FCFCFC] tracking-[1.5px] md:tracking-[3px] mb-3 tenor">
             Follow Us
           </span>
           <div className="grid grid-cols-2 md:flex md:justify-center gap-4 mx-4 md:mx-auto mt-2 justify-items-center items-center drop-shadow-xl">
-            <Image
-              width={300}
-              height={300}
-              src={InstagramPost_1}
-              alt="Instagram post 1"
-            />
-
-            <Image
-              width={300}
-              height={300}
-              src={InstagramPost_2}
-              alt="Instagram post 2"
-            />
+            <Link href="#" aria-label="social link">
+              <Image
+                width={300}
+                height={300}
+                src={InstagramPost_1}
+                alt="Instagram post 1"
+              />
+            </Link>
+            <Link href="#" aria-label="social link">
+              <Image
+                width={300}
+                height={300}
+                src={InstagramPost_2}
+                alt="Instagram post 2"
+              />
+            </Link>
           </div>
         </div>
       </section>

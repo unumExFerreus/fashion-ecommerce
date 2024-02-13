@@ -27,7 +27,7 @@ const SearchResults = ({ params }) => {
   }
 
   return (
-    <>
+    <div className="flex flex-col justify-between w-full min-h-[calc(100dvh-60px)]">
       <section
         aria-label="search results"
         className="md:container max-w-[1440px] mx-auto"
@@ -41,7 +41,7 @@ const SearchResults = ({ params }) => {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 };
 

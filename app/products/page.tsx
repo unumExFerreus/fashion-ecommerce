@@ -26,10 +26,10 @@ const products = () => {
   );
 
   return (
-    <div className="w-full tenor">
-      <div className="w-full max-w-[1440px] mx-auto">
+    <div className="flex flex-col justify-between w-full min-h-[calc(100dvh-60px)] tenor">
+      <div className="w-full lg:max-w-[1440px] mx-auto">
         <section
-          className="grid grid-cols-1 lg:grid-cols-3 w-full h-fit mt-3 md:mt-6 md:container relative"
+          className="grid grid-cols-1 lg:grid-cols-3 w-full h-fit mt-3 md:mt-6 lg:mx-auto md:container relative"
           aria-label="products content"
         >
           {visibleProducts.map((item) => (
