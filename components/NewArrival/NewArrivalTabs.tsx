@@ -35,7 +35,6 @@ const NewArrivalTabs = () => {
 
   return (
     <>
-      {/* tab button */}
       <header aria-label="arrival tab button">
         <ul className="flex flex-wrap justify-evenly w-[90%] mx-auto mt-2 md:mt-4 z-10 text-sm md:text-base tenor">
           <li className="relative">
@@ -120,7 +119,6 @@ const NewArrivalTabs = () => {
           </li>
         </ul>
       </header>
-      {/* tab content */}
       <section
         className="flex flex-wrap justify-evenly w-full h-fit mt-4 md:mt-6 relative"
         aria-label="arrival content"
@@ -139,14 +137,14 @@ const NewArrivalTabs = () => {
               key={items.id}
               className="flex w-[45%] md:w-[24%] relative"
             >
-              <div className="flex flex-col">
+              <div className="flex flex-col mx-auto">
                 <Image
                   width={300}
                   height={400}
                   src={`/images/productimage/${items.img}`}
                   alt={items.title}
-                  className="object-cover object-top max-h-[350px]"
-                ></Image>
+                  className="object-cover object-top h-[180px] sm:h-[250px] md:h-[300px] lg:h-[400px]"
+                />
                 <div className="flex-col mx-auto pt-1 md:pt-2 pb-4">
                   <h3 className="text-center text-[#fcfcfc] text-xs md:text-sm">
                     {items.title}
