@@ -87,7 +87,7 @@ export default function Home() {
           <LogoSVG />
         </div>
         <header className="text-sm md:text-base text-[#fcfcfc]/60 text-center tenor container max-w-[1440px] mx-auto">
-          <h2 className="pt-4 pb-2 px-5 md:px-[30%]">
+          <h2 className="pt-4 pb-5 px-5 md:px-[30%]">
             Making a luxurious lifestyle accessible for a generous group of
             women is our daily drive.
           </h2>

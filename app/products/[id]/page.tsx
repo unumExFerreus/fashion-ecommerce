@@ -51,9 +51,9 @@ export default function Page({ params }: { params: { id: any } }) {
               src={`/images/productimage/${data?.img}`}
               alt={data?.title ?? "Product Image"}
               className="object-contain object-center w-full md:w-2/3 max-w-[750px] mx-auto"
-            ></Image>
+            />
           </div>
-          <div className="flex flex-col justify-between min-w-full md:px-0 md:mb-0 md:mt-[25%] mt-10">
+          <div className="flex flex-col justify-between min-w-full md:px-0 md:mb-0">
             <div className="flex flex-col w-full container">
               <div>
                 <h1 className="text-[#fcfcfc] text-xl md:text-2xl">

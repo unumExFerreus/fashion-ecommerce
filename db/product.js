@@ -1,7 +1,7 @@
 const data = [
   {
     category: "Apparel",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "Harris Tweed Three button Jacket",
     id: 1,
     title: "Apparel 1",
     price: 120,
@@ -12,7 +12,7 @@ const data = [
   },
   {
     category: "Apparel",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "Harris Tweed Three button Jacket",
     id: 2,
     title: "Apparel 2",
     price: 100,
@@ -23,7 +23,7 @@ const data = [
   },
   {
     category: "Apparel",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "Harris Tweed Three button Jacket",
     id: 3,
     title: "Apparel 3",
     price: 150,
@@ -34,7 +34,7 @@ const data = [
   },
   {
     category: "Apparel",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "Harris Tweed Three button Jacket",
     id: 4,
     title: "Apparel 4",
     price: 40,
@@ -45,7 +45,7 @@ const data = [
   },
   {
     category: "Dress",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "reversible angora cardigan",
     id: 5,
     title: "Dress 1",
     price: 120,
@@ -56,7 +56,7 @@ const data = [
   },
   {
     category: "Dress",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "reversible angora cardigan",
     id: 6,
     title: "Dress 2",
     price: 100,
@@ -67,7 +67,7 @@ const data = [
   },
   {
     category: "Dress",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "reversible angora cardigan",
     id: 7,
     title: "Dress 3",
     price: 150,
@@ -78,7 +78,7 @@ const data = [
   },
   {
     category: "Dress",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "reversible angora cardigan",
     id: 8,
     title: "Dress 4",
     price: 40,
@@ -133,7 +133,7 @@ const data = [
   },
   {
     category: "Bag",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "Oblong bag",
     id: 13,
     title: "Bag 1",
     price: 120,
@@ -144,7 +144,7 @@ const data = [
   },
   {
     category: "Bag",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "Oblong bag",
     id: 14,
     title: "Bag 2",
     price: 100,
@@ -155,7 +155,7 @@ const data = [
   },
   {
     category: "Bag",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "Oblong bag",
     id: 15,
     title: "Bag 3",
     price: 150,
@@ -166,7 +166,7 @@ const data = [
   },
   {
     category: "Bag",
-    description: "Recycle Boucle Knit Cardigan Pink",
+    description: "Oblong bag",
     id: 16,
     title: "Bag 4",
     price: 40,
