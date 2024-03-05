@@ -3,8 +3,8 @@ import React from "react";
 const DotSVG = () => {
   return (
     <svg
-    //   width="9"
-    //   height="9"
+      // width="9"
+      // height="9"
       viewBox="0 0 9 9"
     >
       <rect

@@ -1,11 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Nav from "@/components/Navigation/Nav";
 
 import { CartProvider } from "@/Context/CartContext";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Open Fashion",
@@ -23,7 +20,7 @@ export default function RootLayout({
       className="bg-[#111] scroll-smooth"
       lang="en"
     >
-      <body className={inter.className}>
+      <body>
         <header className="sticky top-0 w-full h-auto z-50">
           <Nav />
         </header>

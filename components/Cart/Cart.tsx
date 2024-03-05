@@ -49,7 +49,7 @@ function Cart({ id, quantity }: CartProps) {
             src={`/images/productimage/${data?.img}`}
             alt={data?.title ?? "Product Image"}
             className="object-contain object-top"
-          ></Image>
+          />
         </div>
         <div className="flex flex-col w-2/3 mx-auto pt-0 px-3">
           <h3 className="text-[#fcfcfc] text-base md:text-xl pt-0 sm:pt-1">

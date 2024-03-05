@@ -27,17 +27,17 @@ const SearchResults = ({ params }) => {
   }
 
   return (
-    <div className="flex flex-col justify-between w-full min-h-[calc(100dvh-60px)]">
-      <section
-        aria-label="search results"
-        className="md:container max-w-[1440px] mx-auto"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-3 w-full h-fit my-6 relative">
+    <div className="flex flex-col justify-between w-full min-h-[calc(100dvh-60px)] tenor">
+      <div className="w-full lg:max-w-[1440px] mx-auto">
+        <section
+          className="grid grid-cols-1 lg:grid-cols-3 w-full h-fit mt-3 md:mt-6 lg:mx-auto md:container relative"
+          aria-label="search results"
+        >
           {filteredItems.map((item) => (
             <ProductsCards key={item.id} itemsData={item} />
           ))}
-        </div>
-      </section>
+        </section>
+      </div>
       <footer>
         <Footer />
       </footer>
