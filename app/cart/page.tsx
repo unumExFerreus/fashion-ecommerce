@@ -26,7 +26,7 @@ const page = () => {
             ))
           ) : (
             <span className="text-[#fcfcfc]/60">
-              You have no items in your Shopping Bag.
+              You have no items in your shopping bag.
             </span>
           )}
         </div>
