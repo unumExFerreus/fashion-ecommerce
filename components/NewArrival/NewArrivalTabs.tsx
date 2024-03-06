@@ -1,10 +1,10 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { data } from "../../db/product";
+import Image from "next/image";
 import Link from "next/link";
 
 const NewArrivalTabs = () => {
@@ -137,7 +137,7 @@ const NewArrivalTabs = () => {
               key={items.id}
               className="flex w-[45%] md:w-[24%] relative"
             >
-              <div className="flex flex-col mx-auto">
+              <Link href={`/products/${items.id}`} className="flex flex-col mx-auto">
                 <Image
                   width={300}
                   height={400}
@@ -153,7 +153,7 @@ const NewArrivalTabs = () => {
                     ${items.price}
                   </span>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         <Link
